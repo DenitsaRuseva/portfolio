@@ -1,0 +1,69 @@
+.layout {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 2px;
+    /* background: url('../../assets/slider_sm.jpg') no-repeat;
+    background-size: 100%; */
+}
+
+
+
+
+.background {
+    position: relative;
+    height: 100vh;
+}
+
+.background::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: url('../../assets/slider_sm.jpg') no-repeat center center;
+    transform: translateZ(-1px) scale(1.5);
+    /* Force the background image to fill the whole element. */
+    background-size: cover;
+    /* background-attachment: fixed; */
+    /* Keep the image from overlapping sibling elements. */ 
+    z-index: -1;
+}
+
+.background::before{
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    left: 10px;
+    bottom: 10px;
+    border: 1px solid #1c1c1c;
+}
+
+.background-border{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    bottom: 15px;
+    right: 15px;
+    border: 1px solid #1c1c1c;
+}
+
+
+@media only screen and (min-width: 992px){
+    .layout{
+    
+    }
+    .layout .logo{
+        display: none;
+    }
+    .background::after{
+        background: url('../../assets/slider_big.jpg');
+        background-size: cover;
+    }
+
+}
