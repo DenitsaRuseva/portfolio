@@ -53,13 +53,14 @@
         background: none;
     }
     .toolbar.show-menu {
+        position: fixed;
         top: 0;
     }
     .toolbar-border.sm-only{
         display: none;
     }
     .desk-only{
-        position: absolute;
+        position: fixed;
         top: 11rem;
         right: 0;
         left: 0;
@@ -69,20 +70,25 @@
         transition: top 0.9s;
         z-index: 2;
     }
-    /* .desk-only::after{
+    .desk-only::after{
         content: '';
         position: absolute;
+        /* top: -10rem; */
         top: -10rem;
         left: 0;
         right: 0;
-        height: 5rem;
+        height: 0px;
+        /* height: 5rem; */
         background: rgba(0, 0, 0, 0.5);
         z-index: 1;
-        transition: top 2s;
-    } */
+        /* transition: top 0.3s; */
+        transition: height 0.3s;
+
+    }
 
     .toolbar.show-menu .desk-only::after {
-        top: 0;
+        /* top: 0; */
+        height: 15rem;
     }
     .toolbar.show-menu .desk-only {
         top: 6rem;
