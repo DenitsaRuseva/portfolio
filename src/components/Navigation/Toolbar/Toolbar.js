@@ -36,8 +36,6 @@ import Logo from 'components/Logo/Logo';
                 <Logo/>
                 <DrawerToggle clicked={toggleMenuHandler}/>
             </div>
-           
-
         </div>
     );
 };

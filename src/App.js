@@ -12,7 +12,8 @@ function App() {
          
           <Route path='/about' render={()=> <h1 style={{height: '100vh'}}>ABOUT PAGE</h1>}/>
           <Route path='/' component={() => <Fragment>
-            <div className='background'><div className='background-border'></div></div><Home/>
+            {/* <div className='background'><div className='background-border'></div></div> */}
+            <Home/>
           </Fragment>}/>
         </Switch>
       </Layout>
