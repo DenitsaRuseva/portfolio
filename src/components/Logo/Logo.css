@@ -13,6 +13,9 @@
 }
 
 @media only screen and (min-width: 992px){
+    .layout .logo{
+        display: none;
+    }
     .layout .desk-only .logo{
         display: block;
         position: absolute;

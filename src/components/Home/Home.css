@@ -31,9 +31,9 @@
     top: 10px;
     right: 10px;
     left: 10px;
-    height: 100vh;
+    height: calc(81vh - 20px);
     /* bottom: 10px; */
-    border: 1px solid #1c1c1c;
+    border: 3px double rgba(0,0,0,0.4)
 }
 
 .background-border{
@@ -60,6 +60,9 @@
 @media only screen and (min-width: 992px){
     .home::after{
         height: 200vh;
+    }
+    .home::before{
+        height: calc(100vh - 20px);
     }
     .test{
         top: 100vh;
