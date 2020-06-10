@@ -7,17 +7,17 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 export default function(props){
     return(
         <nav className='navigation-items'>
-            <NavigationItem link='/'><span><span>HOME</span><FontAwesomeIcon icon={faHome} className='nav-svg'>
+            <NavigationItem link='/'><span><span><span>HOME</span></span><FontAwesomeIcon icon={faHome} className='nav-svg'>
                 </FontAwesomeIcon></span>
                 
             </NavigationItem>
-            <NavigationItem link='/gallery'><span><span>GALLERY</span><FontAwesomeIcon icon={faCameraRetro} className='nav-svg'></FontAwesomeIcon></span>
+            <NavigationItem link='/gallery'><span><span><span>GALLERY</span></span><FontAwesomeIcon icon={faCameraRetro} className='nav-svg'></FontAwesomeIcon></span>
                 </NavigationItem>
-            <NavigationItem link='/shop' ><span><span>SHOP</span><FontAwesomeIcon icon={faShoppingCart} className='nav-svg'></FontAwesomeIcon></span>
+            <NavigationItem link='/shop' ><span><span><span>SHOP</span></span><FontAwesomeIcon icon={faShoppingCart} className='nav-svg'></FontAwesomeIcon></span>
                 </NavigationItem>
-            <NavigationItem link='/about'><span><span>ABOUT</span><FontAwesomeIcon icon={faUserSecret} className='nav-svg'></FontAwesomeIcon></span>
+            <NavigationItem link='/about'><span><span><span>ABOUT</span></span><FontAwesomeIcon icon={faUserSecret} className='nav-svg'></FontAwesomeIcon></span>
                 </NavigationItem>
-                <NavigationItem link='/contacts' ><span><span>CONTACTS</span><FontAwesomeIcon icon={faMapMarkerAlt} className='nav-svg'></FontAwesomeIcon></span>
+                <NavigationItem link='/contacts' ><span><span><span>CONTACTS</span></span><FontAwesomeIcon icon={faMapMarkerAlt} className='nav-svg'></FontAwesomeIcon></span>
                 </NavigationItem>
         </nav>
     );
