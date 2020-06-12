@@ -1,6 +1,7 @@
 .home{
     position: relative;
- width: 100%;
+    top: 20px;
+    width: 100%;
    
 }
 
@@ -36,25 +37,25 @@
     border: 3px double rgba(0,0,0,0.4)
 }
 
-.background-border{
+/* .background-border{
     position: absolute;
     top: 15px;
     left: 15px;
     bottom: 15px;
     right: 15px;
     border: 1px solid #1c1c1c;
-}
+} */
 
 
 
-.test{
+.home-content{
    position: relative;
    top: calc(100vh - 9rem);
-    background: yellow;
+   background: #000000;
 }
 
-.test p {
-    height: 50vh;
+.home-compensator{
+    height: 100vh;
 }
 
 @media only screen and (min-width: 992px){
@@ -64,7 +65,7 @@
     .home::before{
         height: calc(100vh - 20px);
     }
-    .test{
+    .home-content{
         top: 100vh;
     }
 }
