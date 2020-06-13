@@ -1,13 +1,21 @@
 .btn {
     position: relative;
     padding: 10px;
-    /* font-size: 1rem; */
+    font-size: 1rem;
 	letter-spacing: 0.1rem;
     outline: none;
     border: none;
     background: #660033;
     color: white;
+    overflow: hidden;
     transition: color 0.5s;
+}
+
+.btn span {
+    position: relative;
+    background: transparent;
+    color: inherit;
+    z-index: 2;
 }
 
 .btn::before,
@@ -19,7 +27,7 @@
     bottom: 0;
     height: 100%;
     width: 0px;
-    background: rgba(256, 256, 256, 0.5);
+    background: #ffffff;
     cursor: pointer;
     transition: width 0.5s cubic-bezier(1,1.82,.92,-0.03);
 }
@@ -33,14 +41,15 @@
 }
 
 .btn:hover{
-    color: #cc0044;
+    color: #391326;
+}
+.btn.active{
+    background: #ffffff;
+    color: #391326;
 }
 
 .btn:hover::after,
 .btn:hover::before{
-    /* animation: btnBackground;
-    animation-duration: 0.3s;
-    animation-fill-mode: both; */
     width: 50%;
 }
 
