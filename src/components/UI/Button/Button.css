@@ -1,5 +1,7 @@
 .btn {
     position: relative;
+    margin-bottom: 10px;
+    margin-right: 10px;
     padding: 10px;
     font-size: 1rem;
 	letter-spacing: 0.1rem;
@@ -9,6 +11,9 @@
     color: white;
     overflow: hidden;
     transition: color 0.5s;
+}
+.btn:last-child{
+    margin-right: 0px;
 }
 
 .btn span {
