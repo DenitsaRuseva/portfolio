@@ -6,7 +6,6 @@
 
 .portfolio,
 .portfolio-text-container,
-.portfolio-svg-container,
 .portfolio-buttons-container,
 .portfolio-buttons-wrap,
 .portfolio-gallery{
@@ -15,7 +14,7 @@
 
 .portfolio-text-container{
     position: relative;
-    height: 7rem;
+    height: 8rem;
 }
 
 .portfolio-text-container > .portfolio-text-wrapp {
@@ -24,7 +23,7 @@
     left: 0;
     right: 0;
     width: 100%;
-    height: 7rem;
+    height: 8rem;
     opacity: 0;
     overflow: hidden;
 }
@@ -54,6 +53,17 @@
     font-style: italic;
 }
 
+.portfolio-divider {
+    position: relative;
+    /* bottom: 1rem; */
+    width: 80%;
+    height: 1px;
+    margin: 0 auto;
+    max-width: 300px;
+    box-shadow: 0 0 3px white;
+}
+
+
 .portfolio-buttons-container {
     display: flex;
     position: relative;
@@ -62,7 +72,7 @@
     align-items: center;
     max-width: 530px;
     margin: 0px auto;
-    padding: 20px;
+    padding: 0px 20px 20px 20px;
 }
 
 

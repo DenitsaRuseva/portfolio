@@ -44,9 +44,7 @@ export default function Portfolio(){
                 <div className='portfolio-text-wrapp'>                
                     <h1>PORTFOLIO</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
-                    <div className='portfolio-svg-container'>
-                        <div className='line left'></div>
-                        <div className='line right'></div>
+                    <div className='portfolio-divider'>
                     </div>
                 </div>
 
