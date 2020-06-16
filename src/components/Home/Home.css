@@ -16,12 +16,8 @@
     height: 190vh;
     background: url('../../assets/slider_big.jpg') no-repeat center center;
     transform: translateZ(-1px) scale(1.5);
-    /* Force the background image to fill the whole element. */
-    /* background-size: cover; */
     background-attachment: fixed;
     background-position-y: 20%;
-    /* background-attachment: fixed; */
-    /* Keep the image from overlapping sibling elements. */ 
     z-index: -1;
 }
 

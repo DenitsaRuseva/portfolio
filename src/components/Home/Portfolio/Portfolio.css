@@ -8,24 +8,55 @@
 .portfolio-text-container,
 .portfolio-svg-container,
 .portfolio-buttons-container,
+.portfolio-buttons-wrap,
 .portfolio-gallery{
     width: 100%;
 }
 
+.portfolio-text-container{
+    position: relative;
+    height: 7rem;
+}
+
+.portfolio-text-container > .portfolio-text-wrapp {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 7rem;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.portfolio-text-container.show-text > .portfolio-text-wrapp {
+    animation: flipInX 1s forwards 0.3s;
+
+    /* top: 0; */
+    /* height: 7rem; */
+}
 
 .portfolio-text-container h1 {
-    margin: 0.5em 0;
-    font-size: 3.5rem;
+    height: 5rem;
+    margin: 0;
+    line-height: 5rem;
+    font-size: 4rem;
     font-weight: 500;
 }
 
 .portfolio-text-container p {
+    height: 2rem;
+    margin: 0;
+    text-align: center;
+    line-height: 2rem;
+    font-size: 1rem;
     font-weight: 300;
     font-style: italic;
 }
 
 .portfolio-buttons-container {
     display: flex;
+    position: relative;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -33,6 +64,25 @@
     margin: 0px auto;
     padding: 20px;
 }
+
+
+
+/* .portfolio-buttons-wrap{
+    display: inline-flex;
+    position: absolute;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background: black;
+    transition: width 1s;
+} */
+
+
 
 .portfolio-gallery{
    
@@ -46,3 +96,66 @@
         font-size: 1.2rem;
     }
 }
+
+
+/* @keyframes undefined-easeOutBounce {
+	0% {
+		height: 0px;
+	}
+
+	12% {
+		height: 0.76rem;
+	}
+
+	24% {
+		height: 3.05rem;
+	}
+
+	36% {
+		height: 6.9rem;
+	}
+
+	54% {
+		height: 5.2rem;
+	}
+
+	74% {
+		height: 6.88rem;
+	}
+
+	82% {
+		height: 6.56rem;
+	}
+
+	92% {
+		height: 6.95rem;
+	}
+
+	96% {
+		height: 6.89rem;
+	}
+
+	100% {
+		height: 7rem;
+	}
+
+} */
+
+
+
+@keyframes flipInX {
+    0% {
+       transform: perspective(400px) rotateX(90deg);
+       opacity: 0;
+    }
+    40% {
+       transform: perspective(400px) rotateX(-10deg);
+    }
+    70% {
+       transform: perspective(400px) rotateX(10deg);
+    }
+    100% {
+       transform: perspective(400px) rotateX(0deg);
+       opacity: 1;
+    }
+ } 
