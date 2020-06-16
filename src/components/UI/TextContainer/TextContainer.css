@@ -1,0 +1,76 @@
+
+.text-container{
+    position: relative;
+    width: 100%;
+    height: 8rem;
+}
+
+.text-container > .text-wrapp {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 8rem;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.text-container.show-text > .text-wrapp {
+    animation: flipInX 1s forwards 0.3s;
+}
+
+.text-container h1 {
+    height: 5rem;
+    margin: 0;
+    line-height: 5rem;
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+.text-container p {
+    height: 2rem;
+    margin: 0;
+    text-align: center;
+    line-height: 2rem;
+    font-size: 1rem;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.text-divider {
+    position: relative;
+    width: 80%;
+    height: 1px;
+    margin: 0 auto;
+    max-width: 300px;
+    box-shadow: 0 0 3px white;
+}
+
+
+
+@media only screen and (min-width: 992px){
+    .text-container h1 {
+        font-size: 4rem;
+    }
+    .text-container p {
+        font-size: 1.2rem;
+    }
+}
+
+@keyframes flipInX {
+    0% {
+       transform: perspective(400px) rotateX(90deg);
+       opacity: 0;
+    }
+    40% {
+       transform: perspective(400px) rotateX(-10deg);
+    }
+    70% {
+       transform: perspective(400px) rotateX(10deg);
+    }
+    100% {
+       transform: perspective(400px) rotateX(0deg);
+       opacity: 1;
+    }
+ } 

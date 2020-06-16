@@ -1,5 +1,6 @@
 import React, {useState, useEffect, useRef} from 'react';
 import Button from 'components/UI/Button/Button';
+import TextContainer from 'components/UI/TextContainer/TextContainer';
 import './Portfolio.css';
 
 
@@ -31,24 +32,14 @@ export default function Portfolio(){
         setActiveBtnIndex(index);
     };
 
-    const headerClasses = ['portfolio-text-container'];
     const btnContClasses = ['portfolio-buttons-container'];
     if(showHeader){
-        headerClasses.push('show-text');
         btnContClasses.push('show-btns');
     };
 
     return(
         <div className='portfolio'>
-            <div className={headerClasses.join(' ')}>
-                <div className='portfolio-text-wrapp'>                
-                    <h1>PORTFOLIO</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
-                    <div className='portfolio-divider'>
-                    </div>
-                </div>
-
-            </div>
+            <TextContainer showHeader={showHeader} header='PORTFOLIO' subtitle='Lorem ipsum dolo sit amet'/>
             <div className={btnContClasses.join(' ')}>
                     <Button class={actveBtnIndex === 0 ? 'btn active' : 'btn'} clicked={() => toggleActiveButton(0)}>ALL</Button>
                     <Button class={actveBtnIndex === 1 ? 'btn active' : 'btn'} clicked={() => toggleActiveButton(1)}>STILL LIFE</Button>
