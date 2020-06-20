@@ -1,0 +1,38 @@
+.fancyGallery{
+    padding: 20px 10px;
+}
+
+
+.fancyGallery,
+.fancyGallery-buttons-container,
+.fancyGallery-buttons-wrap,
+.fancyGallery-gallery{
+    width: 100%;
+}
+
+
+
+
+.fancyGallery-buttons-container {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 530px;
+    margin: 0px auto;
+    padding: 0px 20px 20px 20px;
+}
+
+
+
+.fancyGallery-gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+   width: 100%;
+}
+.fancyGallery-gallery > div {
+    margin: 20px;
+}

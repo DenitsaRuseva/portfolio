@@ -1,8 +1,8 @@
 import React from 'react';
-import './TextContainer.css';
+import './HeaderContainer.css';
 
 
-export default function textContainer(props){
+export default function headerContainer(props){
 
     const headerClasses = ['text-container'];
     if(props.showHeader === true){
