@@ -1,8 +1,7 @@
 .home{
     position: relative;
-    top: 20px;
     width: 100%;
-   
+    color: white;
 }
 
 
@@ -51,7 +50,7 @@
 }
 
 .home-compensator{
-    height: 100vh;
+    height: calc(100vh - 9rem);
 }
 
 @media only screen and (min-width: 992px){

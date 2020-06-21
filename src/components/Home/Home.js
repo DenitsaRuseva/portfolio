@@ -33,10 +33,7 @@ export default function Home(props){
     };
 
     function listenerTwo(){
-        console.log('in 2')
-        
         if(secondTimer){
-            console.log('in 2 if')
             clearTimeout(secondTimer);
         }
         secondTimer = setTimeout(() => {
