@@ -6,8 +6,9 @@ import './Home.css';
 
 export default function Home(props){
 
-    const showHeaderRef = useRef(null);
-    const showAboutRef = useRef(null);
+    const showHeaderRef = useRef(null); //timeout
+    const showAboutRef = useRef(null);  //timeout
+    const aboutRef = useRef(null);
 
     const [showGalleryHeader, setShowGalleryHeader] = useState(false);
     const [showAboutHeader, setShowAboutHeaderHeader] = useState(false);
@@ -42,7 +43,7 @@ export default function Home(props){
             document.body.offsetHeight, document.documentElement.offsetHeight,
             document.body.clientHeight, document.documentElement.clientHeight
         );
-        if(showAboutRef.current === null && (theHeight - window.scrollY - window.innerHeight < 600)){
+        if(showAboutRef.current === null && (theHeight - window.scrollY - window.innerHeight < aboutRef.current.getBoundingClientRect().height)){
             showAboutRef.current = true;
             removeListenerTwo();
             setShowAboutHeaderHeader(true);
@@ -69,13 +70,14 @@ export default function Home(props){
 
 
 
-
     return(
         <div className='home'>
 
             <div className='home-content'>
                 <FancyGallery showHeader={showGalleryHeader}/>
-                <About showHeader={showAboutHeader}/>
+                <div className='about' ref={aboutRef}>
+                    <About showHeader={showAboutHeader}/>
+                </div>
                 <div className='home-compensator'></div>
             </div>
 
