@@ -63,4 +63,7 @@
     .home-content{
         top: 100vh;
     }
+    .home-compensator{
+        height: 100vh;
+    }
 }

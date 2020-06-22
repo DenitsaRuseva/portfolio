@@ -72,9 +72,11 @@
     }
     40% {
        transform: perspective(400px) rotateX(-10deg);
+       opacity: 1;
     }
     70% {
        transform: perspective(400px) rotateX(10deg);
+       opacity: 0.5;
     }
     100% {
        transform: perspective(400px) rotateX(0deg);
