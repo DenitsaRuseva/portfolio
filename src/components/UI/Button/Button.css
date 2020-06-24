@@ -12,16 +12,24 @@
     color: white;
     overflow: hidden;
     transition: color 0.5s;
+    z-index: 3;
 }
 .btn:last-child{
     margin-right: 0px;
 }
 
-.btn span {
+.btn > span {
     background: transparent;
     color: inherit;
     overflow: hidden;
     z-index: 2;
+}
+
+.btn > span > span {
+    position: relative;
+    display: inline-block;
+    background: transparent;
+    z-index: 3;
 }
 
 .btn span::after{
@@ -45,7 +53,8 @@
     transition: left 0.2s linear 0.4s, width 0.2s linear 0.4s;
 }
 
-div.inViewListener.show-component .fancyGallery-buttons-container .btn span::after{
+div.inViewListener.show-component .fancyGallery-buttons-container .btn span::after,
+.home-carousel .btn span::after{
     width: 0px;
     left: 100%;
 }
