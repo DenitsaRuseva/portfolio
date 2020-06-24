@@ -7,7 +7,7 @@
 
 .paragraph-container h3{
     position: relative;
-    left: -100%;
+    left: -100vw;
     margin: 0px;
     margin-bottom: 5px;
     font-size: 2.5rem;
@@ -16,7 +16,7 @@
     transition: left 0.7s;
 }
 
-.paragraph-container.show h3{
+.inViewListener.show-component .paragraph-container h3{
     left: 0;
 }
 

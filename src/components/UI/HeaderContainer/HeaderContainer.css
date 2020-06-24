@@ -18,8 +18,8 @@
     overflow: hidden;
 }
 
-.header-container.show-text > .text-wrapp {
-    animation: flipInX 1s forwards 0.3s;
+div.inViewListener.show-component .header-container > .text-wrapp {
+    animation: flipInX 1.3s forwards;
 }
 
 .header-container h1 {

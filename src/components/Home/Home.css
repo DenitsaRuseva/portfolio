@@ -49,6 +49,10 @@
    background: #000000;
 }
 
+.home-carousel{
+    width: 100%;
+}
+
 .home-compensator{
     height: calc(100vh - 9rem);
 }

@@ -45,7 +45,7 @@
     transition: left 0.2s linear 0.4s, width 0.2s linear 0.4s;
 }
 
-.fancyGallery-buttons-container.show-btns .btn span::after{
+div.inViewListener.show-component .fancyGallery-buttons-container .btn span::after{
     width: 0px;
     left: 100%;
 }

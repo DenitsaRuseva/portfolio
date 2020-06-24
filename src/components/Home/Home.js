@@ -1,86 +1,35 @@
 import React , {useEffect, useRef, useState} from 'react';
 import FancyGallery from './FancyGallery/FancyGallery';
 import About from 'components/About/About';
+import Carousel from 'components/UI/Carousel/Carousel';
+import HeaderContainer from 'components/UI/HeaderContainer/HeaderContainer';
+import InViewListener from 'hoc/InViewListener/InViewListener';
 import './Home.css';
 
 
 export default function Home(props){
 
-    const showHeaderRef = useRef(null); //timeout
-    const showAboutRef = useRef(null);  //timeout
-    const aboutRef = useRef(null);
-
-    const [showGalleryHeader, setShowGalleryHeader] = useState(false);
-    const [showAboutHeader, setShowAboutHeaderHeader] = useState(false);
-
-  
-
-    let firstTimer;
-    let secondTimer;
-
-   
-    function listenerOne(){
-        if(firstTimer){
-            clearTimeout(firstTimer);
-        };
-        firstTimer = setTimeout(() => {    
-            if(window.scrollY >= window.innerHeight/4 && showHeaderRef.current === null){
-                showHeaderRef.current = true;
-                removeListenerOne();
-                window.addEventListener('scroll', listenerTwo);
-                setShowGalleryHeader(true);
-            };
-        }, 100);
-    };
-
-    function listenerTwo(){
-        if(secondTimer){
-            clearTimeout(secondTimer);
-        }
-        secondTimer = setTimeout(() => {
-        const theHeight = Math.max(
-            document.body.scrollHeight, document.documentElement.scrollHeight,
-            document.body.offsetHeight, document.documentElement.offsetHeight,
-            document.body.clientHeight, document.documentElement.clientHeight
-        );
-        if(showAboutRef.current === null && (theHeight - window.scrollY - window.innerHeight < aboutRef.current.getBoundingClientRect().height)){
-            showAboutRef.current = true;
-            removeListenerTwo();
-            setShowAboutHeaderHeader(true);
-        };
-        }, 100)
-        
-    };
-    function removeListenerOne(){
-        window.removeEventListener('scroll', listenerOne);
-    };
-    function removeListenerTwo(){
-        window.removeEventListener('scroll', listenerTwo);
-    };
-    function removeAllListeners(){
-        window.removeEventListener('scrool', listenerOne);
-        window.removeEventListener('scroll', listenerTwo);
-    }
-
-    useEffect(() => {
-        window.addEventListener('scroll', listenerOne);
-        return removeAllListeners;
-    }, []);
-
-
-
+    const carouselImages = ['https://cdn.pixabay.com/photo/2020/06/19/19/09/switzerland-5318548_1280.jpg',
+                            'https://cdn.pixabay.com/photo/2017/08/07/06/34/weimaraner-2600694_1280.jpg',
+                        'https://cdn.pixabay.com/photo/2020/06/19/08/31/haflinger-5316218_1280.jpg'];
 
     return(
         <div className='home'>
-
             <div className='home-content'>
-                <FancyGallery showHeader={showGalleryHeader}/>
-                <div className='about' ref={aboutRef}>
-                    <About showHeader={showAboutHeader}/>
+                <div className='home-gallery'>
+                    <FancyGallery/>
+                </div>
+                <div className='home-carousel'>
+                    <InViewListener>
+                        <HeaderContainer header='HEADER' subtitle='Lorem ipsum hyt koldd jekksla'  />
+                    </InViewListener>
+                    <Carousel slides={carouselImages}/>
+                </div>
+                <div className='about'>
+                    <About/>
                 </div>
                 <div className='home-compensator'></div>
             </div>
-
         </div>
     );
 };
