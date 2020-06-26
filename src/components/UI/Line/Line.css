@@ -1,0 +1,21 @@
+div.line{
+    display: flex;
+    position: absolute;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+
+div.line > span {
+    width: 100%;
+    /* width: 30%; */
+    border: 1px double black;
+    display: inline-block;
+    height: 4px;
+    border-left: none;
+    border-right: none;
+    border-radius: 50%;
+    background: #b3b3b3;
+}

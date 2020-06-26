@@ -32,18 +32,24 @@ export default function Home(props){
                     </InViewListener>
                     <div className='home-carousel'>
                         <Carousel slides={carouselImages}/>
-                        <Paragraphcontainer header='FIRST HEADER' subtitle='Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem'/>
-                        <Button class='btn' type='button' clicked={goToGalleryPage}>VIEW GALLERY &gt;</Button>
+                        <div className='home-carousel-text-wrapp'>
+                            <Paragraphcontainer header='FIRST HEADER'>Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem. Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem. Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem.</Paragraphcontainer>
+                            <Button class='btn' type='button' clicked={goToGalleryPage}>VIEW GALLERY &gt;</Button>
+                        </div>
                     </div>
                     <div className='home-carousel right'>
                         <Carousel slides={carouselImages}/>
-                        <Paragraphcontainer header='SECOND HEADER' subtitle='Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem'/>
-                        <Button class='btn'type='button'  clicked={goToGalleryPage}>VIEW GALLERY &gt;</Button>
+                        <div className='home-carousel-text-wrapp'>
+                            <Paragraphcontainer header='SECOND HEADER'>Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem. Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem. Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem. Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem. Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem.</Paragraphcontainer>
+                            <Button class='btn'type='button'  clicked={goToGalleryPage}>VIEW GALLERY &gt;</Button>
+                        </div>
                     </div>
                     <div className='home-carousel'>
                         <Carousel slides={carouselImages}/>
-                        <Paragraphcontainer header='THIRTH HEADER' subtitle='Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem'/>
-                        <Button class='btn' type='button' clicked={goToGalleryPage}>VIEW GALLERY &gt;</Button>
+                        <div className='home-carousel-text-wrapp'>
+                            <Paragraphcontainer header='THIRTH HEADER'>Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem. Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem. Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem.</Paragraphcontainer>
+                            <Button class='btn' type='button' clicked={goToGalleryPage}>VIEW GALLERY &gt;</Button>
+                        </div>
                     </div>
                  </div>
                 <div className='about'>

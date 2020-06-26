@@ -4,6 +4,14 @@
     padding: 0 5px;
 }
 
+div.about div.paragraph-container{
+    padding: 0 35px;
+}
+
+div.home-carousel > div.home-carousel-text-wrapp > div.paragraph-container{
+    padding: 20px 30px;
+}
+
 
 .paragraph-container h3{
     position: relative;
@@ -24,9 +32,28 @@
     left: 0;
 }
 
+div.home-carousel > div.home-carousel-text-wrapp > div.paragraph-container > h3 {
+    text-align: center;
+}
+
 .paragraph-container p{
     margin: 0px;
     margin-bottom: 20px;
     text-align: left;
     font-weight: 500;
+}
+
+div.home-carousel > div.home-carousel-text-wrapp > div.paragraph-container > p {
+    text-align: center;
+}
+
+
+@media only screen and (min-width: 768px){
+    div.about > div.paragraph-container h3{
+        left: -100%;
+        transition: left 1.2s;
+    }
+    div.home-carousel > div.home-carousel-text-wrapp > div.paragraph-container{
+        padding: 0 30px;
+    }
 }

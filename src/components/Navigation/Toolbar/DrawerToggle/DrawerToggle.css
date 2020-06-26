@@ -1,4 +1,4 @@
-.drawerToggle{
+div.drawerToggle{
     position: absolute;
     top: 10px;
     right: 17px; /*7px toolbar padding + 10px*/
@@ -14,7 +14,7 @@
     z-index: 2;
 }
 
-.drawerToggle > div {
+div.drawerToggle > div {
     display: block;
     width: 100%;
     height: 2px;
@@ -51,15 +51,15 @@
       -moz-transform: translateY(1);
 }   */
 
-  .toolbar.show-menu .drawerToggle .line-1 {
+  div.toolbar.show-menu div.drawerToggle div.dt-line-1 {
       transform: translateY(12px) translateX(0) rotate(45deg);
       -webkit-transform: translateY(12px) translateX(0) rotate(45deg);
       -moz-transform: translateY(12px) translateX(0) rotate(45deg);
     }
-    .toolbar.show-menu .drawerToggle .line-2 {
+    div.toolbar.show-menu div.drawerToggle div.dt-line-2 {
       opacity:0;
     }
-    .toolbar.show-menu .drawerToggle .line-3 {
+    div.toolbar.show-menu div.drawerToggle div.dt-line-3 {
       transform: translateY(-12px) translateX(0) rotate(-45deg);
       -webkit-transform: translateY(-12px) translateX(0) rotate(-45deg);
       -moz-transform: translateY(-12px) translateX(0) rotate(-45deg);
@@ -67,13 +67,13 @@
 
 
 
-.drawerToggle > div.line-1 {
+div.drawerToggle > div.dt-line-1 {
   top:0;
 }
-.drawerToggle > div.line-2 {
+div.drawerToggle > div.dt-line-2 {
   top:50%;
 }
-.drawerToggle > div.line-3 {
+div.drawerToggle > div.dt-line-3 {
   top:100%;
 }
 }

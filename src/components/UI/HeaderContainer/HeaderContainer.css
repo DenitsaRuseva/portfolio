@@ -18,6 +18,13 @@
     overflow: hidden;
 }
 
+.home-carousels .header-container > .text-wrapp,
+.about .header-container > .text-wrapp{
+    padding: 30px 0;
+}
+
+
+
 div.inViewListener.show-component .header-container > .text-wrapp {
     animation: flipInX 1.3s forwards;
 }

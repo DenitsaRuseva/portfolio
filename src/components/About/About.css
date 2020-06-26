@@ -1,16 +1,21 @@
 .about {
+    position: relative;
     display: inline-flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     width: 100%;
+    margin-bottom: 50px;
+    z-index: 3;
     /* padding: 0 35px 0 30px; */
 }
 
 .about-header-container{
+    position: relative;
     width: 100%;
-
+    background: black;
+    z-index: 3;
 }
 
 .about-img-container {
@@ -40,6 +45,7 @@
     .about-img-container, 
     .about-text-container{
         width: 50%;
-        margin-top: 20px;
+        /* margin-top: 20px; */
+        padding-top: 20px;
     }
 }

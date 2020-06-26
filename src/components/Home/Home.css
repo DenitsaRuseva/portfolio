@@ -51,10 +51,30 @@
 
 .home-carousels{
     width: 100%;
+    /* padding: 30px 0; */
+}
+.home-carousel{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 30px 0;
 }
 
 .home-compensator{
     height: calc(100vh - 9rem);
+}
+
+@media only screen and (min-width: 768px){
+    div.home-carousel {
+        align-items: center;
+    }
+    div.home-carousel > div.carousel,
+    div.home-carousel > div.home-carousel-text-wrapp{
+        width: 50%;
+    }
+    div.home-carousel.right > div.carousel{
+        order: 2;
+    }
 }
 
 @media only screen and (min-width: 992px){

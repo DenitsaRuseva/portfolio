@@ -1,7 +1,6 @@
-.carousel{
+div.carousel{
     position: relative;
     width: 100%;
-    max-width: 600px;
     margin: 0 auto;
 }
 
@@ -48,6 +47,12 @@
 }
 .carousel div.arrow.right{
     right: 0;
+}
+
+@media only screen and (min-width: 768px){
+    div.carousel{
+        max-width: 600px;
+    }
 }
 
 
