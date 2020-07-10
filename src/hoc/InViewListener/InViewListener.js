@@ -37,6 +37,7 @@ export default function InViewListener(props){
 
     useEffect(() => {
         window.addEventListener('scroll', listener);
+        listener();
         return removeListener;
     }, []);
 

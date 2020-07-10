@@ -6,6 +6,7 @@
 
 
 
+
 .home::after{
     content: '';
     position: absolute;
@@ -28,8 +29,8 @@
     right: 10px;
     left: 10px;
     height: calc(81vh - 20px);
-    /* bottom: 10px; */
     border: 3px double rgba(0,0,0,0.4)
+   
 }
 
 /* .background-border{
@@ -49,15 +50,50 @@
    background: #000000;
 }
 
+div.home > div.about{
+    margin-bottom: 50px;
+}
+
+div.home > div.about > div.about-info{
+    display: none;
+}
+
+div.home > div.about div.about-header-container{
+    background: #000000;
+}
+
+div.home > div.about > div.about-img-container{
+    background: #000000;
+}
+
+
 .home-carousels{
     width: 100%;
     /* padding: 30px 0; */
 }
+
 .home-carousel{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: 30px 0;
+}
+
+
+div.home div.home-carousel div.carousel{
+    margin: 0 0 0 auto;
+}
+div.home div.home-carousel.right div.carousel{
+    margin: 0 auto 0 0;
+}
+
+div.home-carousel > div.home-carousel-text-wrapp{
+    max-width: 600px;
+    margin: 0 auto 0 0;
+}
+
+div.home-carousel.right > div.home-carousel-text-wrapp{
+    margin: 0 0 0 auto;
 }
 
 .home-compensator{
@@ -67,6 +103,7 @@
 @media only screen and (min-width: 768px){
     div.home-carousel {
         align-items: center;
+        padding: 0;
     }
     div.home-carousel > div.carousel,
     div.home-carousel > div.home-carousel-text-wrapp{

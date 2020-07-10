@@ -52,9 +52,7 @@ export default function Home(props){
                         </div>
                     </div>
                  </div>
-                <div className='about'>
                     <About/>
-                </div>
                 <div className='home-compensator'></div>
             </div>
         </div>

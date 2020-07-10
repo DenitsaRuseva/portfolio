@@ -1,22 +1,26 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import './About.css';
-import aboutImg from 'assets/images/about_a.png';
+// import {ReactComponent as AboutImage} from 'assets/images/painter.svg';
+import aboutImg from 'assets/images/back.png';
 import HeaderContainer from 'components/UI/HeaderContainer/HeaderContainer';
 import ParagraphContainer from 'components/UI/ParagraphContainer/ParagraphContainer';
 import InViewListener from 'hoc/InViewListener/InViewListener';
 
-export default function about(props){
+export default function about(){
 
 
     return(
-        <Fragment>
+        <div className='about'>
             <div className='about-header-container'>
                 <InViewListener>
                     <HeaderContainer header='ABOUT ME' subtitle='Lorem ipsum dhsk kdfji kdpej'/>
                 </InViewListener>
             </div>
             <div className='about-img-container'>
+                {/* <AboutImage/> */}
+                <div className='about-img-wrapp'>
                 <img className='about-img' src={aboutImg} alt=''/>
+                </div>
             </div>
             <div className='about-text-container'>
                 <InViewListener>
@@ -24,6 +28,6 @@ export default function about(props){
                     <ParagraphContainer header='MY EXIBITIONS'>Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Lorem ipsum dolor quis nostrud exercitation ullamco</ParagraphContainer>  
                 </InViewListener>
             </div>
-        </Fragment>
+        </div>
     );
 };

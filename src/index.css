@@ -1,5 +1,3 @@
-@import-normalize;
-
 html {
   position: relative;
   width: 100%;
@@ -16,6 +14,7 @@ body {
   padding: 0px;
   width: 100%;
   font-family: 'Open Sans Condensed', sans-serif;
+  color: white;
 }
 
 
@@ -36,4 +35,5 @@ main {
   position: relative;
   /* top: -20px; */
   width: 100%;
+  /* background: black; */
 }

@@ -7,6 +7,7 @@
     width: 100%;
     height: 0px;
     overflow: hidden;
+    border-bottom: 1px solid white;
     transition: height 0.5s ease-out;
     z-index: 1000;
 }
@@ -18,7 +19,7 @@
 @media only screen and (min-width: 992px){
     .toolbar .navigation-items{
         height: 6rem;
-
+        border-bottom: none;
         perspective: 500px;
         /* background: black; */
         transform: rotateX(90deg); 

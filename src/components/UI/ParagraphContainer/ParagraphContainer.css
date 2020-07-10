@@ -24,6 +24,7 @@ div.home-carousel > div.home-carousel-text-wrapp > div.paragraph-container{
     transition: left 0.7s;
 }
 
+
 .inViewListener .paragraph-container h3{
     left: -100vw;
 }
@@ -49,9 +50,12 @@ div.home-carousel > div.home-carousel-text-wrapp > div.paragraph-container > p {
 
 
 @media only screen and (min-width: 768px){
-    div.about > div.paragraph-container h3{
+    div.about div.paragraph-container h3 {
         left: -100%;
-        transition: left 1.2s;
+    }
+    div.about .inViewListener.show-component .paragraph-container h3{
+        /* left: -100%; */
+        transition: left 1s ease-in-out;
     }
     div.home-carousel > div.home-carousel-text-wrapp > div.paragraph-container{
         padding: 0 30px;

@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import './App.css';
 import Layout from 'hoc/Layout/Layout';
 import Home from 'components/Home/Home';
+import About from 'components/About/About';
 import {Switch, Route} from 'react-router-dom';
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
       <Layout>
         <Switch>
          
-          <Route path='/about' render={()=> <h1 style={{height: '100vh'}}>ABOUT PAGE</h1>}/>
+          <Route path='/about' component={About}/>
           <Route path='/' component={() => <Fragment>
             {/* <div className='background'><div className='background-border'></div></div> */}
             <Home/>
