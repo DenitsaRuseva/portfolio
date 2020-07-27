@@ -1,4 +1,4 @@
-import React , {useEffect, useRef, useState} from 'react';
+import React from 'react';
 import FancyGallery from './FancyGallery/FancyGallery';
 import About from 'components/About/About';
 import Carousel from 'components/UI/Carousel/Carousel';

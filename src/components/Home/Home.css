@@ -15,6 +15,7 @@
     left: 0;
     height: 190vh;
     background: url('../../assets/slider_big.jpg') no-repeat center center;
+    /* background: url('../../assets/horse_sm.jpg') no-repeat center center; */
     transform: translateZ(-1px) scale(1.5);
     background-attachment: fixed;
     background-position-y: 20%;

@@ -1,4 +1,8 @@
 .inViewListener{
     display: inline-block;
+    /* width: 100%; */
+}
+
+div.home .inViewListener {
     width: 100%;
 }

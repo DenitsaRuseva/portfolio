@@ -1,0 +1,141 @@
+.contacts{
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    min-height: calc(100vh - 58px);
+    padding-top: 13px;
+    background: #000000;
+}
+
+div.contacts > div.contacts-wrapp{
+    width: 100%;
+}
+
+div.contacts > div.contacts-wrapp div.contacts-details{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 458px;
+    max-width: 100%;
+    padding: 15px 0px 40px 0px;
+    margin: 0 auto;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+div.contacts > div.contacts-wrapp div.show-component div.contacts-details{
+    opacity: 1;
+}
+
+div.contacts > div.contacts-wrapp div.contacts-details > div.contacts-details-wrapp{
+    display: inline-block;
+    text-align: left;
+}
+
+
+div.contacts > div.contacts-wrapp div.contacts-details > div.contacts-details-wrapp svg{
+    width: 1em;
+}
+
+
+div.contacts > div.contacts-wrapp div.contacts-details > div.contacts-details-wrapp span{
+    display: inline-block;
+    padding: 5px 0px 15px 5px;
+    word-wrap: break-word;
+
+}
+
+
+div.contacts div.inViewListener{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 100%;
+}
+
+.contacts div.inViewListener h2 {
+    display: inline-block;
+    margin: 1em 0;
+    opacity: 0;
+    font-size: 2.5rem;
+    font-weight: 400;
+    transition: opacity 0.5s;
+}
+
+.contacts div.inViewListener.show-component h2 {
+    opacity: 1;
+}
+
+
+div.contact-form-container{
+    position: relative;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 1px solid #660033;
+    max-width: 100%;
+    padding: 8px 29px;
+    /* width: 90%; */
+    /* margin: 0 auto; */
+}
+
+div.contact-form-container > form {
+    width: 400px;
+    max-width: 100%;
+    /* margin: 0 auto; */
+}
+
+div.contacts > div.contacts-wrapp div.contact-btn-container {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    padding: 15px 0px;
+    text-align: left;
+}
+
+div.contacts > div.contacts-wrapp div.contact-btn-container .btn{
+    padding: 10px 20px;
+}
+
+@media only screen and (min-width: 800px){
+  
+    div.contacts div.inViewListener{
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 800px;
+        padding: 0 20px;
+        /* flex-direction: row;
+        flex-wrap: wrap; */
+    }
+    .contacts div.inViewListener h2{
+        width: 100%;
+        text-align: left;
+    }
+    div.contact-form-container {
+        flex: 60%;
+        max-width: 400px;
+        /* margin-left: 20px; */
+    }
+
+    div.contacts > div.contacts-wrapp div.contact-btn-container {
+        order: 3;
+        width: 100%;
+    }
+
+    div.contacts > div.contacts-wrapp div.contacts-details{
+        order: 2;
+        flex: 40%;
+        justify-content: center;
+    }
+
+
+}
+
+@media only screen and (min-width: 992px){
+    div.contacts{
+        padding-top: 65px;
+    }
+}
+

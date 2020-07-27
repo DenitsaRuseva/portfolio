@@ -1,9 +1,9 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React from 'react';
 import './HeaderContainer.css';
 import { ReactComponent as Divider } from 'assets/images/divider-36856.svg';
 
 
-export default function HeaderContainer(props){
+export default function headerContainer(props){
     return(
     <div className='header-container'>
         <div className='text-wrapp'>                
