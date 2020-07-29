@@ -1,10 +1,25 @@
-.contacts{
+.contacts {
     position: relative;
     z-index: 3;
     width: 100%;
     min-height: calc(100vh - 58px);
     padding-top: 13px;
-    background: #000000;
+    background: rgba(0,0,0,1);
+    color: gray;
+}
+
+div.contacts::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../../assets/images/map-of-the-world-2401458_1920.jpg');
+    background-position: center;
+    /* filter: grayscale(100%); */
+    z-index: -1;
+    opacity: 0.1;
 }
 
 div.contacts > div.contacts-wrapp{
@@ -128,14 +143,17 @@ div.contacts > div.contacts-wrapp div.contact-btn-container .btn{
         order: 2;
         flex: 40%;
         justify-content: center;
-    }
+        padding-top: 0px;
 
+    }
 
 }
 
 @media only screen and (min-width: 992px){
     div.contacts{
         padding-top: 65px;
+
     }
+    
 }
 

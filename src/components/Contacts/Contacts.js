@@ -3,8 +3,8 @@ import './Contacts.css';
 import Input from 'components/UI/Input/Input';
 import InViewListener from 'hoc/InViewListener/InViewListener';
 import Button from 'components/UI/Button/Button';
-import {faFacebookF} from '@fortawesome/free-brands-svg-icons';
-import {faPhone, faEnvelope} from '@fortawesome/free-solid-svg-icons';
+import {faFacebookSquare} from '@fortawesome/free-brands-svg-icons';
+import {faPhoneSquare, faEnvelope} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {updateObject, checkValidity} from '../../utility';
 
@@ -99,7 +99,7 @@ export default function Contacts(props){
                     <div className='contacts-details'>
                         <div className='contacts-details-wrapp'>
                             <div>
-                                <FontAwesomeIcon icon={faPhone}/>
+                                <FontAwesomeIcon icon={faPhoneSquare}/>
                                 <span>Phone: +359 878 6783</span>
                             </div>
                             <div>
@@ -107,7 +107,7 @@ export default function Contacts(props){
                                 <span>E-mail: desi@dkjfkl.jd</span>
                             </div>
                             <div>
-                                <FontAwesomeIcon icon={faFacebookF}/>
+                                <FontAwesomeIcon icon={faFacebookSquare}/>
                                 <span>Facebook: facebook/desislavaRuseva</span>
                             </div>
                         </div>

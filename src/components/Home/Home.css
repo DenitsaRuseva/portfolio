@@ -2,6 +2,7 @@
     position: relative;
     width: 100%;
     color: white;
+    background: rgba(0,0,0,0.7);
 }
 
 
@@ -14,14 +15,15 @@
     right: 0;
     left: 0;
     height: 190vh;
-    background: url('../../assets/slider_big.jpg') no-repeat center center;
+    background: url('../../assets/horse_sm.jpg') no-repeat center center;
     /* background: url('../../assets/horse_sm.jpg') no-repeat center center; */
     transform: translateZ(-1px) scale(1.5);
     background-attachment: fixed;
-    background-position-y: 20%;
+    /* background-position-y: 20%; */
+    /* filter: grayscale(100%); */
     z-index: -1;
 }
-
+/* 
 .home::before{
     display: block;
     content: '';
@@ -32,7 +34,7 @@
     height: calc(81vh - 20px);
     border: 3px double rgba(0,0,0,0.4)
    
-}
+} */
 
 /* .background-border{
     position: absolute;

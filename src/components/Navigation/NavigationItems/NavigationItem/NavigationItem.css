@@ -89,7 +89,7 @@ a.navigation-item svg.nav-svg{
     a.navigation-item:first-child svg.nav-svg {
         width: 40px;
         height: 40px;
-        /* color: #000000; */
+        color: #660033;
     }
 
     a.navigation-item span:hover {
@@ -100,7 +100,7 @@ a.navigation-item svg.nav-svg{
         visibility: visible;
         width: 40px;
         height: 40px;
-        color: #000000;
+        color: #660033;
     }
 
     a.navigation-item > span:hover > span > span {
@@ -125,19 +125,19 @@ a.navigation-item svg.nav-svg{
     }
     a.navigation-item > span:hover > span > span::before {
         left: -10px;
-       color: darkgreen;
+       color: #660033;
     }
     a.navigation-item > span:hover > span > span::after {
         left: 10px;
-       color: darkgreen;
+       color: #660033;
     }
 
     a.navigation-item:first-child > span > span > span::before{
-        color: darkgreen;
+        color: #660033;
         left: -10px;
     }
     a.navigation-item:first-child > span > span > span::after{
-        color: darkgreen;
+        color: #660033;
         left: 10px;
     }
 }

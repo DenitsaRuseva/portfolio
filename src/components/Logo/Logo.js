@@ -5,6 +5,6 @@ import './Logo.css';
 
 export default function logo(){
     return(
-        <div className='logo'>LOGO</div>
+        <div className='logo'>DesyArt</div>
     );
 };
