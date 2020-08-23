@@ -4,9 +4,6 @@
     margin-bottom: 10px; 
      margin-right: 10px;
     padding: 10px;
-/*    
-    outline: none;
-    border: none; */
     background: #660033;
     font-size: 1rem;
 	letter-spacing: 0.1rem;
@@ -15,6 +12,10 @@
     transition: color 0.5s;
     z-index: 3;
 }
+
+/* .btn.active{
+    background: #ffffff;
+} */
 
 /* 
 .btn:last-child{
@@ -77,6 +78,11 @@ div.inViewListener.show-component .fancyGallery-buttons-container .btn span::aft
     transition: width 0.5s cubic-bezier(1,1.82,.92,-0.03);
 }
 
+/* .btn.active::before,
+.btn.active::after{
+    background: #660033;
+} */
+
 .btn::before{
     right: 50%;
 }
@@ -88,10 +94,20 @@ div.inViewListener.show-component .fancyGallery-buttons-container .btn span::aft
 .btn:hover{
     color: #391326;
 }
-.btn.active::after{
-    /* background: black; */
-    /* color: #391326; */
+.btn.active{
+    color: #391326;
 }
+.btn.active:hover{
+    color: #ffffff;
+}
+
+
+
+
+/* .btn.active::after,
+.btn.active::before{
+    background: #391326;
+} */
 
 .btn:hover::after,
 .btn:hover::before
@@ -99,5 +115,14 @@ div.inViewListener.show-component .fancyGallery-buttons-container .btn span::aft
 .btn.btn.active::before */
 {
     width: 50%;
+}
+
+.btn.active::after,
+.btn.active::before{
+    width: 50%;
+}
+.btn.active:hover::after,
+.btn.active:hover::before{
+width: 0px;
 }
 

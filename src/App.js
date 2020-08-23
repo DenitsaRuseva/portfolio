@@ -4,6 +4,7 @@ import Layout from 'hoc/Layout/Layout';
 import Home from 'components/Home/Home';
 import About from 'components/About/About';
 import Contacts from 'components/Contacts/Contacts';
+import Shop from 'container/Shop/Shop';
 import {Switch, Route} from 'react-router-dom';
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
     <div className="App">
       <Layout>
         <Switch>
-         
+          <Route path='/shop' component={Shop}/>
           <Route path='/about' component={About}/>
           <Route path='/contacts' component={Contacts}/>
           <Route path='/' component={() => <Fragment>

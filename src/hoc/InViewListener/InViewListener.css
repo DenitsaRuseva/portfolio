@@ -3,6 +3,7 @@
     /* width: 100%; */
 }
 
-div.home .inViewListener {
+div.home div.inViewListener,
+div.shop div.inViewListener {
     width: 100%;
 }

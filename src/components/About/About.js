@@ -1,7 +1,7 @@
 import React from 'react';
 import './About.css';
-// import {ReactComponent as AboutImage} from 'assets/images/painter.svg';
-import aboutImg from 'assets/images/back.png';
+import {ReactComponent as AboutImage} from 'assets/images/photographer-30423.svg';
+// import aboutImg from 'assets/images/photographer-30423.svg';
 import HeaderContainer from 'components/UI/HeaderContainer/HeaderContainer';
 import ParagraphContainer from 'components/UI/ParagraphContainer/ParagraphContainer';
 import InViewListener from 'hoc/InViewListener/InViewListener';
@@ -17,9 +17,9 @@ export default function about(){
                 </InViewListener>
             </div>
             <div className='about-img-container'>
-                {/* <AboutImage/> */}
                 <div className='about-img-wrapp'>
-                <img className='about-img' src={aboutImg} alt=''/>
+                <AboutImage/>
+                {/* <img className='about-img' src={aboutImg} alt=''/> */}
                 </div>
             </div>
             <div className='about-text-container'>

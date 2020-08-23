@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight} from '@fortawesome/free-solid-svg-icons';
 import './Carousel.css';
@@ -8,7 +8,7 @@ import {useInterval} from '../../../utility';
 export default function Carousel(props){
 
     const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
-
+        
     const showNextSlide = () => {
         const newIndex = (currentSlideIndex + 1) % props.slides.length;
         setCurrentSlideIndex(newIndex);
@@ -21,7 +21,7 @@ export default function Carousel(props){
 
     useInterval(() => {
         showNextSlide();
-      }, 3000);
+    }, 3000);
 
     return (
         <div className='carousel'>
