@@ -1,0 +1,50 @@
+div.fg-wrapp{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+div.fg-item-container{
+    display: inline-block;
+    /* margin-bottom: 20px; */
+    padding: 10px;
+}
+
+div.fg-item-container > img.fg-item{
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+div.fg-item-container > img.fg-item:hover {
+    transform: scale(1.1);
+}
+
+@media only screen and (min-width: 400px){
+    div.fg-wrapp{
+        display: block;
+        column-count: 2;
+        column-gap: 0px;
+    }
+    div.fg-item-container > img.fg-item:last-child{
+        margin-top: auto;
+    }
+}
+
+@media only screen and (min-width: 600px){
+    div.fg-wrapp{
+        column-count: 3;
+    }
+}
+
+@media only screen and (min-width: 1092px){
+    div.fg-wrapp{
+        column-count: 4;
+    }
+}
+
+
+

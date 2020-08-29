@@ -40,8 +40,8 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-   width: 100%;
-   
+    width: 100%;
+    min-height: 70vh;
 }
 .fancyGallery-gallery::after{
     content: '';
@@ -51,7 +51,7 @@
     right: 0;
     width: 100%;
     height: 100%;
-    background: url('../../../assets/images/18699703_264620794006794_5410145634690834259_o.jpg') no-repeat center center;
+    /* background: url('../../../assets/images/18699703_264620794006794_5410145634690834259_o.jpg') no-repeat center center; */
    background-attachment: fixed;
    z-index: 1;
    /* transform: translateZ(-1px) scale(1.5); */

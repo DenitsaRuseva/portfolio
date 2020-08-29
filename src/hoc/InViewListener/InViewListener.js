@@ -38,8 +38,8 @@ export default function InViewListener(props){
     };
 
     useEffect(() => {
-        window.addEventListener('scroll', listener);
         listener();
+        window.addEventListener('scroll', listener);
         return removeListener;
     }, []);
 

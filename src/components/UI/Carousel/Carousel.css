@@ -19,7 +19,7 @@ div.carousel{
     width: 100%;
     height: 100%;
     opacity: 0;
-    transition: opacity 3s;
+    transition: opacity 0.5s ease-in-out;
 }
 .carousel > div.slide-container > img.slide.current{
     opacity: 1;

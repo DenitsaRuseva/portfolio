@@ -31,7 +31,7 @@
     position: relative;
 }
 
-.about > .about-img-container > div.about-img-wrapp > img.about-img {
+.about > .about-img-container > div.about-img-wrapp > svg {
     display: block;
     width: 250px;
     max-width: 100%;
