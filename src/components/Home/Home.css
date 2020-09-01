@@ -75,6 +75,7 @@ div.home > div.about > div.about-img-container{
 
 .home-carousels{
     width: 100%;
+    padding: 0 20px;
     /* padding: 30px 0; */
 }
 
@@ -95,7 +96,8 @@ div.home div.home-carousel.right div.carousel{
 
 div.home-carousel > div.home-carousel-text-wrapp{
     max-width: 600px;
-    margin: 0 auto 0 0;
+    /* margin: 0 auto 0 0; */
+    margin: 0 auto;
 }
 
 div.home-carousel.right > div.home-carousel-text-wrapp{
@@ -107,6 +109,9 @@ div.home-carousel.right > div.home-carousel-text-wrapp{
 }
 
 @media only screen and (min-width: 768px){
+    div.home-carousels{
+        padding: 0;
+    }
     div.home-carousel {
         align-items: center;
         padding: 0;
@@ -114,6 +119,7 @@ div.home-carousel.right > div.home-carousel-text-wrapp{
     div.home-carousel > div.carousel,
     div.home-carousel > div.home-carousel-text-wrapp{
         width: 50%;
+        /* margin: 0 auto 0 0; */
     }
     div.home-carousel.right > div.carousel{
         order: 2;
@@ -121,6 +127,9 @@ div.home-carousel.right > div.home-carousel-text-wrapp{
 }
 
 @media only screen and (min-width: 992px){
+    div.home-carousels{
+        padding: 0 20px;
+    }
     .home::after{
         height: 200vh;
     }

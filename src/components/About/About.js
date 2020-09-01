@@ -13,7 +13,7 @@ export default function about(){
         <div className='about'>
             <div className='about-header-container'>
                 <InViewListener>
-                    <HeaderContainer header='ABOUT ME' subtitle='Lorem ipsum dhsk kdfji kdpej'/>
+                    <HeaderContainer header='ABOUT ME' subtitle='Morbi fermentum urna.'/>
                 </InViewListener>
             </div>
             <div className='about-img-container'>

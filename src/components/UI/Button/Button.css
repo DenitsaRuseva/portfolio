@@ -1,8 +1,7 @@
 .btn {
     display: inline-block;
     position: relative;
-    margin-bottom: 10px; 
-     margin-right: 10px;
+    margin: 0 10px 20px 0px;
     padding: 10px;
     background: #660033;
     font-size: 1rem;
@@ -47,14 +46,20 @@
     height: 100%;
     background: #000000;
     z-index: 2;
-    transition: left 0.2s linear 0.2s, width 0.2s linear 0.2s;
+    /* transition: left 0.2s linear 0.2s, width 0.2s linear 0.2s; */
+    /* transition: left 0.5s linear 0.5s; */
+    /* transition: left 0.5s linear 0.7s; */
+
 }
 
 .fancyGallery-buttons-container .btn:first-child span::after{
-    transition:  left 0.2s linear 0s, width 0.2s linear 0s;
+    /* transition:  left 0.2s linear 0s, width 0.2s linear 0s; */
+    /* transition:  left 0.5s linear 0s; */
+
 }
 .fancyGallery-buttons-container .btn:last-child span::after{
-    transition: left 0.2s linear 0.4s, width 0.2s linear 0.4s;
+    /* transition: left 0.2s linear 0.4s, width 0.2s linear 0.4s; */
+    /* transition: left 0.5s linear 1.4s; */
 }
 
 div.inViewListener.show-component .fancyGallery-buttons-container .btn span::after,
@@ -75,7 +80,7 @@ div.inViewListener.show-component .fancyGallery-buttons-container .btn span::aft
     width: 0px;
     background: #ffffff;
     cursor: pointer;
-    transition: width 0.5s cubic-bezier(1,1.82,.92,-0.03);
+    transition: width 0.3s cubic-bezier(1,1.82,.92,-0.03);
 }
 
 /* .btn.active::before,
@@ -83,13 +88,16 @@ div.inViewListener.show-component .fancyGallery-buttons-container .btn span::aft
     background: #660033;
 } */
 
+
+
+
 .btn::before{
-    right: 50%;
+    right: 51%;
 }
 
 .btn::after{
-    left: 50%;
-}
+    left: 49%;
+} 
 
 .btn:hover{
     color: #391326;
@@ -97,9 +105,7 @@ div.inViewListener.show-component .fancyGallery-buttons-container .btn span::aft
 .btn.active{
     color: #391326;
 }
-.btn.active:hover{
-    color: #ffffff;
-}
+
 
 
 
@@ -123,6 +129,15 @@ div.inViewListener.show-component .fancyGallery-buttons-container .btn span::aft
 }
 .btn.active:hover::after,
 .btn.active:hover::before{
-width: 0px;
+/* width: 0px; */
 }
 
+@media only screen and (min-width: 992px){
+    .btn.active:hover{
+        color: #ffffff;
+    }
+    .btn.active:hover::after,
+    .btn.active:hover::before{
+        width: 0px;
+    }
+}

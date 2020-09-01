@@ -28,7 +28,7 @@ export default function Home(props){
                 </div>
                 <div className='home-carousels'>
                     <InViewListener>
-                        <HeaderContainer header='HEADER' subtitle='Lorem ipsum hyt koldd jekksla'  />
+                        <HeaderContainer header='HEADER' subtitle='Donec varius libero purus, tristique egestas.'  />
                     </InViewListener>
                     <div className='home-carousel'>
                         <Carousel slides={carouselImages}/>

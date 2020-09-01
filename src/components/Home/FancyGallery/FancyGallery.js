@@ -92,7 +92,7 @@ export default function FancyGallery(props){
     return(
         <div className='fancyGallery'>
             <InViewListener>
-                <HeaderContainer header='PORTFOLIO' subtitle='Lorem ipsum dolo sit amet'/>
+                <HeaderContainer header='GALLERY' subtitle='Donec in metus facilisis, vulputate.'/>
                 <div className='fancyGallery-buttons-container'>
                         <Button class={actveBtnIndex === 0 ? 'btn active' : 'btn'} clicked={() => fetchNatureMortes()}>NATURE MORTE</Button>
                         <Button class={actveBtnIndex === 1 ? 'btn active' : 'btn'} clicked={() => fetchBandW()}>B&amp;W</Button>

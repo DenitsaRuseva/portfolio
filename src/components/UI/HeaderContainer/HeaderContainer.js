@@ -8,10 +8,10 @@ export default function headerContainer(props){
     <div className='header-container'>
         <div className='text-wrapp'>                
             <h1>{props.header}</h1>
-            <p>{props.subtitle}</p>
-            <div className='text-divider'>
+            {/* <p>{props.subtitle}</p> */}
+            {/* <div className='text-divider'>
                 <Divider/>
-            </div>
+            </div> */}
         </div>
     </div>);
 };
