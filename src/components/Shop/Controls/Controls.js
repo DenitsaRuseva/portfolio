@@ -1,11 +1,14 @@
-import React, {useState} from 'react';
+import React, {useState, Fragment} from 'react';
 import './Controls.css';
 import {faPaintBrush, faFlask, faWindowClose, faChevronDown} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Control from './Control/Control';
+import Backdrop from 'components/UI/Backdrop/Backdrop';
 import { updateObject } from 'utility';
 
 export default function Controls(){
+
+    const [showBackdrop, setShowBackdrop] = useState(false);
 
     const [form, setForm] = useState({
         collections: {
@@ -41,11 +44,21 @@ export default function Controls(){
         const updatedField = updateObject(form[formProperty], {showOptions: !form[formProperty].showOptions});
         const updatedForm = updateObject(form, {[formProperty]: updatedField});
         setForm(updatedForm);
+        setShowBackdrop(!showBackdrop);
     };
     const chooseOptionHandler = (formProperty, value) => {
         const updatedField = updateObject(form[formProperty], {value: value, showOptions: false});
         const updatedForm = updateObject(form, {[formProperty]: updatedField});
         setForm(updatedForm);
+        setShowBackdrop(!showBackdrop);
+    };
+    const closeControlsHendler = () => {
+        let updatedForm = {...form};
+        for(let i in form){
+            updatedForm[i] =  updateObject(form[i], {showOptions: false}); 
+        };
+        setForm(updatedForm);
+        setShowBackdrop(false);
     };
 
     const controls = [];
@@ -83,8 +96,13 @@ export default function Controls(){
     // };
 
     // const selectContainerClasses = showCategory ? 'select-container show' : 'select-container';
-
-    return controls;
+    const backdrop = showBackdrop ? <Backdrop clicked={closeControlsHendler}/> : null;
+    return (
+            <Fragment>
+                {backdrop}
+                {controls}
+            </Fragment>
+    );
     // return(
     //     <div className='shop-controls-container'>
     //             <div className={selectContainerClasses}>

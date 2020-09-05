@@ -49,6 +49,11 @@ div.shop-controls-container div.select-container div.select-options-wrapp div.se
     width: 100%;
 }
 
+div.shop-controls-container div.select-container.show div.select-options-wrapp div.select-options-container{
+
+    z-index: 901;
+}
+
 div.shop-controls-container div.select-container div.select-options-wrapp div.select-options-container div.option{
     /* background: white; */
     justify-content: flex-start;
