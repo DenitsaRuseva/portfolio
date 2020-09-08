@@ -1,5 +1,6 @@
 div.shop{
-    height: 100vh;
+    /* padding-top: 20px; */
+    height: 100vh; /*  TO REMOVE!!!!!!!!*/
     background: black;
 
 }

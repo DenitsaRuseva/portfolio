@@ -1,4 +1,4 @@
-import React, {useState, Fragment} from 'react';
+import React, {useState} from 'react';
 import './Controls.css';
 import {faPaintBrush, faFlask, faWindowClose, faChevronDown} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -98,10 +98,10 @@ export default function Controls(){
     // const selectContainerClasses = showCategory ? 'select-container show' : 'select-container';
     const backdrop = showBackdrop ? <Backdrop clicked={closeControlsHendler}/> : null;
     return (
-            <Fragment>
+            <div className='shop-controls'>
                 {backdrop}
                 {controls}
-            </Fragment>
+            </div>
     );
     // return(
     //     <div className='shop-controls-container'>

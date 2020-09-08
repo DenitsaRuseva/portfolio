@@ -11,11 +11,11 @@ export default function Shop(props){
 
     return(
         <div className='shop'>
-            {/* <div className='shop-header-container'>
+            <div className='shop-header-container'>
                 <InViewListener>
                     <HeaderContainer header='SHOP' subtitle='Lorem ipsum nopte bot'/>
                 </InViewListener>
-            </div> */}
+            </div>
             <Controls/>
             <div className='shop-gallery'></div>
         </div>

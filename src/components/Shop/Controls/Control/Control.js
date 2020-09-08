@@ -1,6 +1,6 @@
 import React from 'react';
-import './Control.css';
-import {faPaintBrush, faFlask, faWindowClose, faChevronDown} from '@fortawesome/free-solid-svg-icons';
+import './Control.css'
+import {faBahai, faWindowClose, faChevronDown, faSun} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function control(props){
@@ -13,7 +13,7 @@ export default function control(props){
         options.push(
         <div className='option control-box' onClick={() => props.clickedOption(props.name,props.options[i].value)}>
             <div className='select-svg-container'>
-                <FontAwesomeIcon icon={faPaintBrush}/>
+                <FontAwesomeIcon icon={faSun}/>
             </div>
         <span>{props.options[i].displayValue}</span>
     </div>);
@@ -28,7 +28,7 @@ export default function control(props){
     );
 
     return(
-        <div className='shop-controls-container'>
+        <div className='shop-control-container'>
                 <div className={selectContainerClasses}>
                     <div className='select-label control-box'>{props.name.toString().toUpperCase()}:</div>
                     <div className='select-options-wrapp'>
