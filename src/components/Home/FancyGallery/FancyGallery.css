@@ -78,8 +78,8 @@ div.inViewListener.show-component .fancyGallery-buttons-container::after{
 } */
 
 
-.fancyGallery-gallery > div {
+/* .fancyGallery-gallery > div {
     position: relative;
     margin: 20px;
     z-index: 2;
-}
+} */

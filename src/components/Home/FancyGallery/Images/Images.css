@@ -8,19 +8,39 @@ div.fg-wrapp{
 }
 
 div.fg-item-container{
+    position: relative;
     display: inline-block;
     /* margin-bottom: 20px; */
-    padding: 10px;
+    /* padding: 10px; */
+    perspective: 500px;
+    transform: translateZ(-20px);
 }
 
 div.fg-item-container > img.fg-item{
     width: auto;
     max-width: 100%;
     height: auto;
+    padding: 10px;
     cursor: pointer;
 }
-div.fg-item-container > img.fg-item:hover {
+div.fg-item-comtainer:hover{
+    /* border: 1px solid darkgreen; */
+    background: gray;
+
+}
+div.fg-item-container:hover img{
+    position: relative;
+    /* padding: 0;
+    border: 2px solid green;
+    background: gray;
     transform: scale(1.1);
+    transition: transform 0.3s ease-in-out; */
+    /* border: 1px solid darkgreen; */
+    box-shadow: 0 0 4px inset #1d8c39;
+    /* background: linear-gradient(45deg, black, #0c1c10, #0c1c10, black); */
+
+    transform: translateZ(20px);
+    transition: transform 0.3s;
 }
 
 @media only screen and (min-width: 400px){
