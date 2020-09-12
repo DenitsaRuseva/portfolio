@@ -1,6 +1,11 @@
 div.shop{
     /* padding-top: 20px; */
-    height: 100vh; /*  TO REMOVE!!!!!!!!*/
+    /* height: 100vh;  */
+    /*  TO REMOVE!!!!!!!!*/
     background: black;
 
+}
+
+div.shop-gallery{
+    margin-top: 50px;
 }

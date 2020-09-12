@@ -11,7 +11,7 @@ export default function control(props){
     const options = [];
     for(let i=1; i<props.options.length; i++){
         options.push(
-        <div className='option control-box' onClick={() => props.clickedOption(props.name,props.options[i].value)}>
+        <div key={props.options[i].displayValue} className='option control-box' onClick={() => props.clickedOption(props.name,props.options[i].value)}>
             <div className='select-svg-container'>
                 <FontAwesomeIcon icon={faSun}/>
             </div>
@@ -19,7 +19,7 @@ export default function control(props){
     </div>);
     };
     options.push(
-        <div className='option control-box' onClick={() => props.clickedOption(props.name,props.options[0].value)}>
+        <div key={props.options[0].displayValue} className='option control-box' onClick={() => props.clickedOption(props.name,props.options[0].value)}>
                 <div className='select-svg-container'>
                         <FontAwesomeIcon icon={faWindowClose}/>
                 </div>

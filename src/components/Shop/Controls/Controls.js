@@ -6,25 +6,25 @@ import Control from './Control/Control';
 import Backdrop from 'components/UI/Backdrop/Backdrop';
 import { updateObject } from 'utility';
 
-export default function Controls(){
+export default function Controls(props){
 
     const [showBackdrop, setShowBackdrop] = useState(false);
 
     const [form, setForm] = useState({
-        collections: {
+        collection: {
             options: [
             {value:'select', displayValue: 'Choose collection'},
-            {value:'nature', displayValue: 'Nature Morte'},
-            {value: 'bw', displayValue: 'Black and White'}],
+            {value:'coll_one', displayValue: 'Collection One'},
+            {value: 'coll_two', displayValue: 'Collection Two'}],
             value: 'select',
             showOptions: false
         },
-        colours: {
+        colour: {
             options: [
                 {value: 'select', displayValue: 'Choose colour'},
                 {value: 'blue', displayValue: 'Blue'},
                 {value: 'green', displayValue: 'Green'},
-                {value: 'purplle', displayValue: 'Purplle'}
+                {value: 'baw', displayValue: 'B&W'}
             ],
             value: 'select',
             showOptions: false
@@ -33,7 +33,7 @@ export default function Controls(){
             options: [
                 {value: 'select', displayValue: 'Choose orientation'},
                 {value: 'portret', displayValue: 'Portret'},
-                {value: 'landskape', displayValue: 'Landscape'}
+                {value: 'landscape', displayValue: 'Landscape'}
             ],
             value: 'select',
             showOptions: false
@@ -51,6 +51,7 @@ export default function Controls(){
         const updatedForm = updateObject(form, {[formProperty]: updatedField});
         setForm(updatedForm);
         setShowBackdrop(!showBackdrop);
+        props.onFilterImages(formProperty, value);
     };
     const closeControlsHendler = () => {
         let updatedForm = {...form};
