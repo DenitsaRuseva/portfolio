@@ -19,7 +19,7 @@ export default function control(props){
     </div>);
     };
     options.push(
-        <div key={props.options[0].displayValue} className='option control-box' onClick={() => props.clickedOption(props.name,props.options[0].value)}>
+        <div key={props.options[0].displayValue} className='option control-box' onClick={props.removeFilter}>
                 <div className='select-svg-container'>
                         <FontAwesomeIcon icon={faWindowClose}/>
                 </div>

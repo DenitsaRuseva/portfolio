@@ -2,10 +2,13 @@ div.shop{
     /* padding-top: 20px; */
     /* height: 100vh;  */
     /*  TO REMOVE!!!!!!!!*/
+    min-height: calc(100vh - 58px);
     background: black;
 
 }
 
 div.shop-gallery{
+    position: relative;
     margin-top: 50px;
+    width: 100%;
 }

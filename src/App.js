@@ -11,15 +11,12 @@ function App() {
   return (
     <div className="App">
       <Layout>
-        <Switch>
+        {/* <Switch>
           <Route path='/shop' component={Shop}/>
           <Route path='/about' component={About}/>
           <Route path='/contacts' component={Contacts}/>
-          <Route path='/' component={() => <Fragment>
-            {/* <div className='background'><div className='background-border'></div></div> */}
-            <Home/>
-          </Fragment>}/>
-        </Switch>
+          <Route path='/' component={Home}/>
+        </Switch> */}
       </Layout>
     </div>
   );

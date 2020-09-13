@@ -72,7 +72,8 @@ export default function Controls(props){
         showOptions={form[i].showOptions}
         name={i}
         clicked={()=>toggleShowOptionsHandler(i)}
-        clickedOption={chooseOptionHandler}/>)
+        clickedOption={chooseOptionHandler}
+        removeFilter={props.removeFilter}/>)
     };
 
 
