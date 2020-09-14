@@ -3,9 +3,10 @@ import './Shop.css';
 import HeaderContainer from 'components/UI/HeaderContainer/HeaderContainer';
 import InViewListener from 'hoc/InViewListener/InViewListener';
 import Controls from 'components/Shop/Controls/Controls';
-import axios from 'axios';
+// import axios from 'axios';
 import Images from 'components/Home/FancyGallery/Images/Images';
 import Spinner from 'components/UI/Spinner/Spinner';
+import {fetchData} from '../../utility';
 
 
 function Shop(props){
@@ -37,11 +38,11 @@ function Shop(props){
         fetchData(query, hendleResponse);
     };
 
-    const fetchData = (url, cb) => {
-        axios.get(url)
-        .then(res => cb(res.data))
-        .catch(err => {console.log(err);cb(null, err)});
-    };
+    // const fetchData = (url, cb) => {
+    //     axios.get(url)
+    //     .then(res => cb(res.data))
+    //     .catch(err => {console.log(err);cb(null, err)});
+    // };
 
     const fetchAll = (cb) => {
         const url = 'https://portfolio-f96f5.firebaseio.com/all.json';
@@ -60,7 +61,10 @@ function Shop(props){
                     <HeaderContainer header='GALLERY' subtitle='Lorem ipsum nopte bot'/>
                 </InViewListener>
             </div>
-            <Controls onFilterImages={filterImagesHandler} removeFilter={removeFilterHandler}/>
+            <Controls 
+            onFilterImages={filterImagesHandler} 
+            removeFilter={removeFilterHandler}
+            />
             <div className='shop-gallery'>
                 {loading ? <Spinner/> : <Images data={data}/>}
                 {/* <Images data={data}/> */}

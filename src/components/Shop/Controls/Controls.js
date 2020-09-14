@@ -11,7 +11,7 @@ export default function Controls(props){
     const [showBackdrop, setShowBackdrop] = useState(false);
 
     const [form, setForm] = useState({
-        collection: {
+        category: {
             options: [
             {value:'select', displayValue: 'Choose collection'},
             {value:'coll_one', displayValue: 'Collection One'},
@@ -51,7 +51,11 @@ export default function Controls(props){
         const updatedForm = updateObject(form, {[formProperty]: updatedField});
         setForm(updatedForm);
         setShowBackdrop(!showBackdrop);
-        props.onFilterImages(formProperty, value);
+        if(value === 'select'){
+            props.removeFilter();
+        } else {
+            props.onFilterImages(formProperty, value);
+        }
     };
     const closeControlsHendler = () => {
         let updatedForm = {...form};
@@ -73,31 +77,10 @@ export default function Controls(props){
         name={i}
         clicked={()=>toggleShowOptionsHandler(i)}
         clickedOption={chooseOptionHandler}
-        removeFilter={props.removeFilter}/>)
+        />)
     };
 
 
-
-
-    // const [category, setCategory] = useState('selectCat');
-    // const [showCategory, setShowCategory] = useState(false);
-
-
-    // const categoriesOptions = [{value:'selectCat', displayValue: 'Choose your type'},
-    //             {value:'nature', displayValue: 'Nature Morte'},
-    //             {value: 'bw', displayValue: 'Black and White'}];
-
-    // const changeCategory = (newCategoryValue) => {
-    //     setCategory(newCategoryValue);
-    //     setShowCategory(false);
-    // };
-
-    // const showCategoryHandler = () => {
-    //     const updatedShowCategory = !showCategory;
-    //     setShowCategory(updatedShowCategory);
-    // };
-
-    // const selectContainerClasses = showCategory ? 'select-container show' : 'select-container';
     const backdrop = showBackdrop ? <Backdrop clicked={closeControlsHendler}/> : null;
     return (
             <div className='shop-controls'>
@@ -105,39 +88,4 @@ export default function Controls(props){
                 {controls}
             </div>
     );
-    // return(
-    //     <div className='shop-controls-container'>
-    //             <div className={selectContainerClasses}>
-    //                 <div className='select-label control-box'>Collections:</div>
-    //                 <div className='select-options-wrapp'>
-    //                     <div className='select-value-container control-box' onClick={showCategoryHandler}>
-    //                         <span>{categoriesOptions.find(el => el.value === category).displayValue}</span>
-    //                         <div className='select-svg-container'>
-    //                             <FontAwesomeIcon icon={faChevronDown}/>
-    //                         </div>
-    //                     </div>
-    //                     <div className='select-options-container'>
-    //                         <div className='option control-box' onClick={() => changeCategory('nature')}>
-    //                             <div className='select-svg-container'>
-    //                                 <FontAwesomeIcon icon={faPaintBrush}/>
-    //                             </div>
-    //                             <span>Nature Morte</span>
-    //                         </div>
-    //                         <div className='option control-box' onClick={() => changeCategory('bw')}>
-    //                             <div className='select-svg-container'>
-    //                                 <FontAwesomeIcon icon={faFlask}/>
-    //                             </div>
-    //                             <span value='acrilic'>Black and White</span>
-    //                         </div>
-    //                         <div className='option control-box' onClick={() => changeCategory('selectCat')}>
-    //                             <div className='select-svg-container'>
-    //                                 <FontAwesomeIcon icon={faWindowClose}/>
-    //                             </div>
-    //                             <span>Remove filter</span>
-    //                         </div>
-    //                     </div>
-    //                 </div>
-    //             </div>
-    //         </div>
-    // );
 };

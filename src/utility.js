@@ -1,4 +1,16 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
+import axios from 'axios';
+
+export function fetchData(url, cb){
+  axios.get(url)
+  .then(res => cb(res.data))
+  .catch(err => {console.log(err);cb(null, err)});
+};
+
+// export function fetchAll(cb){
+//   const url = 'https://portfolio-f96f5.firebaseio.com/all.json';
+//   fetchData(url, cb);
+// };
 
 export function useInterval(callback, delay) {
   const savedCallback = useRef();

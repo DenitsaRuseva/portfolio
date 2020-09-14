@@ -6,6 +6,7 @@ import InViewListener from 'hoc/InViewListener/InViewListener';
 import Images from './Images/Images';
 import Spinner from 'components/UI/Spinner/Spinner';
 import axios from 'axios';
+import {fetchData} from '../../../utility';
 
 
 
@@ -66,18 +67,27 @@ export default function FancyGallery(props){
 
 
     useEffect(()=>{
-        fetchNatureMortes();
-        // fetch('https://portfolio-f96f5.firebaseio.com/fg/natureMorte.json', (res, err) => {
-        // if(!err){
-        //     console.log(res.data);
-        //     setData(res.data);
-        //     setLoading(false);
-        // } else {
-        //     console.log("FGallery Err: ", err);
-        //     setLoading(false);
-        // };
-        // });
+        const url = 'https://portfolio-f96f5.firebaseio.com/all.json?orderBy="category"&equalTo="coll_one"'
+        fetchData(url, handleResponse);
     },[]);
+
+
+
+    const showCollectionHandler = (collection) => {
+        setLoading(true);
+        const url = `https://portfolio-f96f5.firebaseio.com/all.json?orderBy="category"&equalTo="${collection}"`;
+        fetchData(url, handleResponse);
+    };
+
+    const handleResponse = (data, err) => {
+        if(!err){
+            setData(data);
+            setLoading(false);
+        } else {
+            setError(err);
+            setData(data);
+        };
+    };
 
 
     console.log("data: ", data);
@@ -94,14 +104,13 @@ export default function FancyGallery(props){
             <InViewListener>
                 <HeaderContainer header='GALLERY' subtitle='Donec in metus facilisis, vulputate.'/>
                 <div className='fancyGallery-buttons-container'>
-                        <Button class={actveBtnIndex === 0 ? 'btn active' : 'btn'} clicked={() => fetchNatureMortes()}>NATURE MORTE</Button>
-                        <Button class={actveBtnIndex === 1 ? 'btn active' : 'btn'} clicked={() => fetchBandW()}>B&amp;W</Button>
+                        <Button class={actveBtnIndex === 0 ? 'btn active' : 'btn'} clicked={() => showCollectionHandler('coll_one')}>COLLECTION ONE</Button>
+                        <Button class={actveBtnIndex === 1 ? 'btn active' : 'btn'} clicked={() => showCollectionHandler('coll_two')}>COLLECYION TWO</Button>
                         <Button class={actveBtnIndex === 2 ? 'btn active' : 'btn'} clicked={() => goToGallery()}>GO TO GALLERY</Button>
                 </div>
             </InViewListener>
             <div className='fancyGallery-gallery'>
                 {content}
-            {/* <Images data={data}/> */}
             </div>
         </div>
     )
