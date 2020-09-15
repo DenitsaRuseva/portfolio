@@ -1,4 +1,4 @@
-div.fg-wrapp{
+div.img-wrapp{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -7,64 +7,22 @@ div.fg-wrapp{
     width: 100%;
 }
 
-div.fg-item-container{
-    position: relative;
-    display: inline-block;
-    /* margin-bottom: 20px; */
-    /* padding: 10px; */
-    perspective: 500px;
-    transform: translateZ(-20px);
-}
-
-div.fg-item-container > img.fg-item{
-    width: auto;
-    max-width: 100%;
-    height: auto;
-    padding: 10px;
-    cursor: pointer;
-}
-div.fg-item-comtainer:hover{
-    /* border: 1px solid darkgreen; */
-    background: gray;
-
-}
-div.fg-item-container:hover img{
-    position: relative;
-    /* padding: 0;
-    border: 2px solid green;
-    background: gray;
-    transform: scale(1.1);
-    transition: transform 0.3s ease-in-out; */
-    /* border: 1px solid darkgreen; */
-    box-shadow: 0 0 4px inset white;
-    /* background: linear-gradient(45deg, black, #0c1c10, #0c1c10, black); */
-
-    transform: translateZ(20px);
-    transition: transform 0.3s;
-}
-
 @media only screen and (min-width: 400px){
-    div.fg-wrapp{
+    div.img-wrapp{
         display: block;
         column-count: 2;
         column-gap: 0px;
     }
-    div.fg-item-container > img.fg-item:last-child{
-        margin-top: auto;
-    }
 }
 
 @media only screen and (min-width: 600px){
-    div.fg-wrapp{
+    div.img-wrapp{
         column-count: 3;
     }
 }
 
 @media only screen and (min-width: 1092px){
-    div.fg-wrapp{
+    div.img-wrapp{
         column-count: 4;
     }
 }
-
-
-

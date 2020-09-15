@@ -7,6 +7,7 @@ import Controls from 'components/Shop/Controls/Controls';
 import Images from 'components/Home/FancyGallery/Images/Images';
 import Spinner from 'components/UI/Spinner/Spinner';
 import {fetchData} from '../../utility';
+import ImgLoader from 'components/UI/ImgLoader/ImgLoader';
 
 
 function Shop(props){
@@ -52,8 +53,7 @@ function Shop(props){
     const removeFilterHandler = () => {
         fetchAll(hendleResponse);
     };
-    
-    
+     
     return(
         <div className='shop'>
             <div className='shop-header-container'>
@@ -67,7 +67,6 @@ function Shop(props){
             />
             <div className='shop-gallery'>
                 {loading ? <Spinner/> : <Images data={data}/>}
-                {/* <Images data={data}/> */}
             </div>
         </div>
     );

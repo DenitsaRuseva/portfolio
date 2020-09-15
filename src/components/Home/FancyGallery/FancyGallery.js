@@ -17,54 +17,11 @@ export default function FancyGallery(props){
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
-    const toggleActiveButton = (index) => {
-        setActiveBtnIndex(index);
-    };
-
-    function errorHandler(err){
-        console.log("FGallery Err: ", err);
-        setLoading(false);
-        setError(err);
-    };
-
-    function setNewData(data){
-        console.log(data);
-        setData(data);
-        setLoading(false);
-    };
-
-    function fetchNatureMortes(){
-        setActiveBtnIndex(0);
-        if(actveBtnIndex === 0){
-            setActiveBtnIndex(0);
-            return;
-        };
-        setActiveBtnIndex(0);
-        fetch('https://portfolio-f96f5.firebaseio.com/fg/natureMorte.json');
-    };
-    function fetchBandW(){
-        if(actveBtnIndex===1){
-            setActiveBtnIndex(1);
-            return;
-        };
-        setActiveBtnIndex(1);
-        fetch('https://portfolio-f96f5.firebaseio.com/fg/baw.json')
-    };
 
     function goToGallery(){
         setActiveBtnIndex(2);
         window.alert('TO DO');
     };
-
-    function fetch(address){
-        setLoading(true);
-        axios.get(address)
-        .then(res => {
-            setNewData(res.data)
-        })
-        .catch(err => errorHandler(err));
-    };
-
 
     useEffect(()=>{
         const url = 'https://portfolio-f96f5.firebaseio.com/all.json?orderBy="category"&equalTo="coll_one"'

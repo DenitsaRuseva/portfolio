@@ -1,0 +1,81 @@
+
+div.img-loader-container{
+    position: relative;
+    display: inline-block;
+    perspective: 500px;
+    transform: translateZ(-20px);
+}
+
+div.img-loader-container > img.img{
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    padding: 10px;
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity 0.5s;
+}
+
+div.img-loader-container.loaded > img.img{
+    opacity: 1;
+}
+
+div.img-loader-container > div.loader-back{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    max-width: 100%;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+div.img-loader-container > div.loader-back > .svg-wrapp{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    padding: 10px; 
+    background: rgba(255, 255, 255, 0.1);
+}
+
+
+
+div.img-loader-container > div.loader-back > .svg-wrapp > svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+div.img-loader-container.loaded > div.loader-back{
+    opacity: 0;
+}
+
+
+
+/* div.img-comtainer:hover{
+    background: gray;
+} */
+
+
+
+div.img-loader-container:hover img{
+    position: relative;
+    box-shadow: 0 0 4px inset white;
+    transform: translateZ(20px);
+    transition: transform 0.3s;
+}
+
+@media only screen and (min-width: 400px){
+    div.img-loader-container > img.img:last-child{
+        margin-top: auto;
+    }
+}
+
+
+
