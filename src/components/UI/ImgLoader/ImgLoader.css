@@ -2,11 +2,14 @@
 div.img-loader-container{
     position: relative;
     display: inline-block;
+    padding: 10px;
+    margin-bottom: 10px;
     perspective: 500px;
     transform: translateZ(-20px);
 }
 
 div.img-loader-container > img.img{
+    position: relative;
     width: auto;
     max-width: 100%;
     height: auto;
@@ -14,6 +17,28 @@ div.img-loader-container > img.img{
     opacity: 0;
     cursor: pointer;
     transition: opacity 0.5s;
+}
+
+div.img-loader-container::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: calc(100% - 60px);
+    height: calc(100% - 60px);
+    border: 1px solid grey;
+    /* opacity: 1; */
+    /* transition: opacity 0.2s; */
+    transition: all 0.3s;
+}
+
+div.img-loader-container:hover::after{
+    /* opacity: 0; */
+    top: -10px;
+    left: -10px;
+    width: calc(100% + 20px);
+    height: calc(100% + 15px);
 }
 
 div.img-loader-container.loaded > img.img{
@@ -64,11 +89,15 @@ div.img-loader-container.loaded > div.loader-back{
 
 
 
-div.img-loader-container:hover img{
-    position: relative;
+div.img-loader-container img{
+    /* position: relative; */
     box-shadow: 0 0 4px inset white;
-    transform: translateZ(20px);
+    /* transform: translateZ(20px); */
     transition: transform 0.3s;
+}
+div.img-loader-container:hover img {
+    /* box-shadow: none; */
+    transform: translateZ(20px);
 }
 
 @media only screen and (min-width: 400px){
