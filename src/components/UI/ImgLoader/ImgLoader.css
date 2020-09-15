@@ -3,8 +3,9 @@ div.img-loader-container{
     position: relative;
     display: inline-block;
     padding: 10px;
-    margin-bottom: 10px;
+    margin: 10px;
     perspective: 500px;
+    cursor: pointer;
     transform: translateZ(-20px);
 }
 
@@ -15,7 +16,6 @@ div.img-loader-container > img.img{
     height: auto;
     padding: 10px;
     opacity: 0;
-    cursor: pointer;
     transition: opacity 0.5s;
 }
 
@@ -30,6 +30,7 @@ div.img-loader-container::after{
     border: 1px solid grey;
     /* opacity: 1; */
     /* transition: opacity 0.2s; */
+    overflow: visible;
     transition: all 0.3s;
 }
 
@@ -90,14 +91,11 @@ div.img-loader-container.loaded > div.loader-back{
 
 
 div.img-loader-container img{
-    /* position: relative; */
     box-shadow: 0 0 4px inset white;
-    /* transform: translateZ(20px); */
     transition: transform 0.3s;
 }
 div.img-loader-container:hover img {
-    /* box-shadow: none; */
-    transform: translateZ(20px);
+    transform: translateZ(15px);
 }
 
 @media only screen and (min-width: 400px){
