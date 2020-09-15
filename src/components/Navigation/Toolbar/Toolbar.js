@@ -31,7 +31,7 @@ import Logo from 'components/Logo/Logo';
                 <span>MENU</span>
                 <DrawerToggle clicked={toggleMenuHandler}/>
             </div>
-            <NavigationItems/>
+            <NavigationItems clicked={toggleMenuHandler}/>
             <div className='desk-only'>
                 <Logo/>
                 <DrawerToggle clicked={toggleMenuHandler}/>

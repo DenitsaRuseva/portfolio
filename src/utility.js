@@ -56,7 +56,6 @@ export function checkValidity(value, rules){
   if(isValid && rules.email && (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value))){
     isValid = false
   };
-  console.log(isValid)
 
   // if (isValid && rules.maxValue) {
   //     isValid = value < rules.maxValue;

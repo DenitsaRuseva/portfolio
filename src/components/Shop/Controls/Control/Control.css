@@ -49,10 +49,14 @@ div.select-svg-container{
 div.shop-control-container div.select-container div.select-options-wrapp div.select-options-container{
     position: absolute;
     width: 100%;
+    z-index: 901;
+    height: 0;
+    /* overflow: hidden; */
+    transition: height 0.1s ease-in-out;
 }
 
 div.shop-control-container div.select-container.show div.select-options-wrapp div.select-options-container{
-
+height: auto;
     z-index: 901;
 }
 
@@ -73,17 +77,16 @@ div.shop-control-container div.select-container.show div.select-options-wrapp di
 div.shop-control-container div.select-container div.select-options-wrapp div.select-options-container div.option:nth-child(1),
 div.shop-control-container div.select-container div.select-options-wrapp div.select-options-container div.option:nth-child(3){
     position: relative;
-    left: 10px;
+    left: 20px;
 }
 
-div.shop-control-container div.select-container div.select-options-wrapp div.select-options-container div.option:nth-child(2){
+div.shop-control-container div.select-container div.select-options-wrapp div.select-options-container div.option:nth-child(2),
+div.shop-control-container div.select-container div.select-options-wrapp div.select-options-container div.option:nth-child(4){
     position: relative;
-    left: -10px;
+    left: -20px;
 }
 
-div.shop-control-container div.select-container.show div.select-options-wrapp div.select-options-container div.option:nth-child(1),
-div.shop-control-container div.select-container.show div.select-options-wrapp div.select-options-container div.option:nth-child(2),
-div.shop-control-container div.select-container.show div.select-options-wrapp div.select-options-container div.option:nth-child(3){
+div.shop-control-container div.select-container.show div.select-options-wrapp div.select-options-container div.option{
     left: 0;
 }
 

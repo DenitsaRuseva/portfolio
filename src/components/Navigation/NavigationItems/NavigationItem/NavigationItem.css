@@ -34,12 +34,12 @@ a.navigation-item svg.nav-svg{
     }
 
 
-    a.navigation-item:first-child,
-    a.navigation-item:first-child span > span{
+    a.navigation-item.active,
+    a.navigation-item.active span > span{
         background: rgba(256, 256, 256, 0.9);
         color: #000000;
     }
-    a.navigation-item:first-child span > span > span {
+    a.navigation-item.active span > span > span {
         background: transparent;
         
     }
@@ -86,7 +86,7 @@ a.navigation-item svg.nav-svg{
         z-index: 500;
     }
 
-    a.navigation-item:first-child svg.nav-svg {
+    a.navigation-item.active svg.nav-svg {
         width: 40px;
         height: 40px;
         color: #660033;
@@ -132,11 +132,11 @@ a.navigation-item svg.nav-svg{
        color: #660033;
     }
 
-    a.navigation-item:first-child > span > span > span::before{
+    a.navigation-item.active > span > span > span::before{
         color: #660033;
         left: -10px;
     }
-    a.navigation-item:first-child > span > span > span::after{
+    a.navigation-item.active > span > span > span::after{
         color: #660033;
         left: 10px;
     }
