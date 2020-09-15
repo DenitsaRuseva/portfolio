@@ -62,7 +62,7 @@ export default function FancyGallery(props){
                 <HeaderContainer header='GALLERY' subtitle='Donec in metus facilisis, vulputate.'/>
                 <div className='fancyGallery-buttons-container'>
                         <Button class={actveBtnIndex === 0 ? 'btn active' : 'btn'} clicked={() => showCollectionHandler('coll_one')}>COLLECTION ONE</Button>
-                        <Button class={actveBtnIndex === 1 ? 'btn active' : 'btn'} clicked={() => showCollectionHandler('coll_two')}>COLLECYION TWO</Button>
+                        <Button class={actveBtnIndex === 1 ? 'btn active' : 'btn'} clicked={() => showCollectionHandler('coll_two')}>COLLECTION TWO</Button>
                         <Button class={actveBtnIndex === 2 ? 'btn active' : 'btn'} clicked={() => goToGallery()}>GO TO GALLERY</Button>
                 </div>
             </InViewListener>

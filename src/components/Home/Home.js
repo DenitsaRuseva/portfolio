@@ -16,9 +16,6 @@ export default function home(){
         
     };
 
-    const carouselImages = ['https://cdn.pixabay.com/photo/2020/06/19/19/09/switzerland-5318548_1280.jpg',
-                            'https://cdn.pixabay.com/photo/2017/08/07/06/34/weimaraner-2600694_1280.jpg',
-                        'https://cdn.pixabay.com/photo/2020/06/19/08/31/haflinger-5316218_1280.jpg'];
 
     return(
         <div className='home'>
@@ -31,25 +28,26 @@ export default function home(){
                         <HeaderContainer header='HEADER' subtitle='Donec varius libero purus, tristique egestas.'  />
                     </InViewListener>
                     <div className='home-carousel'>
-                        <Carousel slides={carouselImages}/>
-                        <div className='home-carousel-text-wrapp'>
+                        <Carousel 
+                        url='https://portfolio-f96f5.firebaseio.com/carousel_one.json'
+                        header='FIRST HEADER'
+                        text='Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem. Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem. Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem.'/>
+                        {/* <div className='home-carousel-text-wrapp'>
                             <Paragraphcontainer header='FIRST HEADER'>Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem. Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem. Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem.</Paragraphcontainer>
                             <Button class='btn' type='button' clicked={goToGalleryPage}>VIEW GALLERY &gt;</Button>
-                        </div>
+                        </div> */}
                     </div>
                     <div className='home-carousel right'>
-                        <Carousel slides={carouselImages}/>
-                        <div className='home-carousel-text-wrapp'>
-                            <Paragraphcontainer header='SECOND HEADER'>Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem. Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem. Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem. Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem. Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem.</Paragraphcontainer>
-                            <Button class='btn'type='button'  clicked={goToGalleryPage}>VIEW GALLERY &gt;</Button>
-                        </div>
+                        <Carousel 
+                        url='https://portfolio-f96f5.firebaseio.com/carousel_two.json'
+                        header='SECOND HEADER'
+                        text='Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem. Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem. Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem. Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem. Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem.'/>
                     </div>
                     <div className='home-carousel'>
-                        <Carousel slides={carouselImages}/>
-                        <div className='home-carousel-text-wrapp'>
-                            <Paragraphcontainer header='THIRTH HEADER'>Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem. Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem. Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem.</Paragraphcontainer>
-                            <Button class='btn' type='button' clicked={goToGalleryPage}>VIEW GALLERY &gt;</Button>
-                        </div>
+                        <Carousel 
+                        url='https://portfolio-f96f5.firebaseio.com/carousel_tree.json'
+                        header='THIRTH HEADER'
+                        text='Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem. Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem. Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem.'/>
                     </div>
                  </div>
                     <About/>
