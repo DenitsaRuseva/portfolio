@@ -1,6 +1,6 @@
 import React from 'react';
 import './About.css';
-import {ReactComponent as AboutImage} from 'assets/images/boy-1299608.svg';
+import {ReactComponent as AboutImage} from 'assets/images/robot.svg';
 // import aboutImg from 'assets/images/photographer-30423.svg';
 import HeaderContainer from 'components/UI/HeaderContainer/HeaderContainer';
 import ParagraphContainer from 'components/UI/ParagraphContainer/ParagraphContainer';

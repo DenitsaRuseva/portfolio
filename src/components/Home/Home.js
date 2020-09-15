@@ -9,7 +9,7 @@ import Button from 'components/UI/Button/Button';
 import './Home.css';
 
 
-export default function Home(props){
+export default function home(){
 
 
     const goToGalleryPage = () => {
