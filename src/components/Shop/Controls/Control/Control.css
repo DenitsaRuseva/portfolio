@@ -33,7 +33,7 @@ div.shop-control-container div.select-container div.select-options-wrapp div.sel
     padding-left: 10px;
     font-size: 1.2rem;
     /* line-height: 2.5rem; */
-    background: gray;
+    background: rgba(255,255,255,0.2);
 }
 
 div.select-svg-container{
@@ -43,20 +43,20 @@ div.select-svg-container{
     width: 10%;
     height: 100%;
     margin-left: 1px;
-    background-color: gray;
+    background: rgba(255,255,255,0.2);
 }
 
 div.shop-control-container div.select-container div.select-options-wrapp div.select-options-container{
     position: absolute;
     width: 100%;
-    z-index: 901;
+    z-index: 3;
     height: 0;
     /* overflow: hidden; */
-    transition: height 0.1s ease-in-out;
+    transition: height 0.1s ease-in-out, z-index .5s;
 }
 
 div.shop-control-container div.select-container.show div.select-options-wrapp div.select-options-container{
-height: auto;
+    height: auto;
     z-index: 901;
 }
 
