@@ -1,4 +1,4 @@
-div.shop > div.shop-controls{
+div.gallery > div.gallery-controls{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -9,7 +9,7 @@ div.shop > div.shop-controls{
 }
 
 @media only screen and (min-width: 600px){
-    div.shop > div.shop-controls{
+    div.gallery > div.gallery-controls{
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: flex-start;

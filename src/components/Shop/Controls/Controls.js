@@ -83,7 +83,7 @@ export default function Controls(props){
 
     const backdrop = showBackdrop ? <Backdrop clicked={closeControlsHendler}/> : null;
     return (
-            <div className='shop-controls'>
+            <div className='gallery-controls'>
                 {backdrop}
                 {controls}
             </div>

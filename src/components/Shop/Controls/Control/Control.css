@@ -1,32 +1,37 @@
-div.shop div.shop-controls div.shop-control-container{
+div.gallery div.gallery-controls div.gallery-control-container{
     width: 100%;
     background-color: black;
 }
 
-div.shop-control-container div.select-container{
+div.gallery-control-container div.select-container{
     width: 100%;
     padding: 0 20px;
 }
 
-div.shop-control-container div.select-container div.select-label{
+div.gallery-control-container div.select-container div.select-label{
+    position: relative;
+    z-index: 3;
+    padding: 0 20px;
     width: 100%;
     font-size: 1.3rem;
 }
 
-div.shop-control-container div.select-container div.select-options-wrapp{
+div.gallery-control-container div.select-container div.select-options-wrapp{
     position: relative;
     width: 100%;
 }
 
-div.shop-control-container div.select-container div.select-options-wrapp div.select-value-container{
+div.gallery-control-container div.select-container div.select-options-wrapp div.select-value-container{
     /* display: flex;
     justify-content: space-between;
     align-items: center; */
+    position: relative;
+    z-index: 3;
     width: 100%;
 }
 
-div.shop-control-container div.select-container div.select-options-wrapp div.select-value-container span,
-div.shop-control-container div.select-container div.select-options-wrapp div.select-options-container div.option span{
+div.gallery-control-container div.select-container div.select-options-wrapp div.select-value-container span,
+div.gallery-control-container div.select-container div.select-options-wrapp div.select-options-container div.option span{
     display: inline-block;
     width: 90%;
     height: 100%;
@@ -46,21 +51,21 @@ div.select-svg-container{
     background: rgba(255,255,255,0.2);
 }
 
-div.shop-control-container div.select-container div.select-options-wrapp div.select-options-container{
+div.gallery-control-container div.select-container div.select-options-wrapp div.select-options-container{
     position: absolute;
+    z-index: -1;
     width: 100%;
-    z-index: 3;
     height: 0;
     /* overflow: hidden; */
     transition: height 0.1s ease-in-out, z-index .5s;
 }
 
-div.shop-control-container div.select-container.show div.select-options-wrapp div.select-options-container{
+div.gallery-control-container div.select-container.show div.select-options-wrapp div.select-options-container{
     height: auto;
     z-index: 901;
 }
 
-div.shop-control-container div.select-container div.select-options-wrapp div.select-options-container div.option{
+div.gallery-control-container div.select-container div.select-options-wrapp div.select-options-container div.option{
     justify-content: flex-start;
     padding-left: 10px;
     color: darkgray;
@@ -69,39 +74,41 @@ div.shop-control-container div.select-container div.select-options-wrapp div.sel
     transition: all 0.5s ease-in-out;
 }
 
-div.shop-control-container div.select-container.show div.select-options-wrapp div.select-options-container div.option{
+div.gallery-control-container div.select-container.show div.select-options-wrapp div.select-options-container div.option{
     opacity: 1;
 }
 
 
-div.shop-control-container div.select-container div.select-options-wrapp div.select-options-container div.option:nth-child(1),
-div.shop-control-container div.select-container div.select-options-wrapp div.select-options-container div.option:nth-child(3){
+div.gallery-control-container div.select-container div.select-options-wrapp div.select-options-container div.option:nth-child(1),
+div.gallery-control-container div.select-container div.select-options-wrapp div.select-options-container div.option:nth-child(3){
     position: relative;
     left: 20px;
 }
 
-div.shop-control-container div.select-container div.select-options-wrapp div.select-options-container div.option:nth-child(2),
-div.shop-control-container div.select-container div.select-options-wrapp div.select-options-container div.option:nth-child(4){
+div.gallery-control-container div.select-container div.select-options-wrapp div.select-options-container div.option:nth-child(2),
+div.gallery-control-container div.select-container div.select-options-wrapp div.select-options-container div.option:nth-child(4){
     position: relative;
     left: -20px;
 }
 
-div.shop-control-container div.select-container.show div.select-options-wrapp div.select-options-container div.option{
+div.gallery-control-container div.select-container.show div.select-options-wrapp div.select-options-container div.option{
     left: 0;
 }
 
 
-div.shop-control-container div.select-container div.select-options-wrapp div.select-options-container div.option div.select-svg-container{
+div.gallery-control-container div.select-container div.select-options-wrapp div.select-options-container div.option div.select-svg-container{
     margin: 0px;
     background: white;
 }
 
-div.shop-control-container div.select-container div.select-options-wrapp div.select-options-container div.option span{
+div.gallery-control-container div.select-container div.select-options-wrapp div.select-options-container div.option span{
     background: white;
 }
 
 
-div.shop-control-container div.control-box{
+div.gallery-control-container div.control-box{
+    /* position: relative;
+    z-index: 3; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -114,11 +121,11 @@ div.shop-control-container div.control-box{
 
 
 @media only screen and (min-width: 600px){
-    div.shop div.shop-controls div.shop-control-container{
+    div.gallery div.gallery-controls div.gallery-control-container{
         width: 33.33%
     }
-    div.shop-control-container div.select-container div.select-options-wrapp div.select-value-container span,
-div.shop-control-container div.select-container div.select-options-wrapp div.select-options-container div.option span{
+    div.gallery-control-container div.select-container div.select-options-wrapp div.select-value-container span,
+div.gallery-control-container div.select-container div.select-options-wrapp div.select-options-container div.option span{
     width: 80%;
     }
 div.select-svg-container{

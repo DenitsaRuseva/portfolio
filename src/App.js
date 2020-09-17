@@ -1,11 +1,6 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import './App.css';
 import Layout from 'hoc/Layout/Layout';
-import Home from 'components/Home/Home';
-import About from 'components/About/About';
-import Contacts from 'components/Contacts/Contacts';
-import Shop from 'container/Shop/Shop';
-import {Switch, Route} from 'react-router-dom';
 
 function App() {
   return (

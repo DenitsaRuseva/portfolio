@@ -28,7 +28,7 @@ export default function control(props){
     );
 
     return(
-        <div className='shop-control-container'>
+        <div className='gallery-control-container'>
                 <div className={selectContainerClasses}>
                     <div className='select-label control-box'>{props.name.toString().toUpperCase()}:</div>
                     <div className='select-options-wrapp'>

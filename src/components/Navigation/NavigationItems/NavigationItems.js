@@ -13,8 +13,8 @@ export default function(props){
             </NavigationItem>
             <NavigationItem clicked={props.clicked} link='/gallery'><span><span><span>GALLERY</span></span><FontAwesomeIcon icon={faCameraRetro} className='nav-svg'></FontAwesomeIcon></span>
                 </NavigationItem>
-            <NavigationItem clicked={props.clicked} link='/shop' ><span><span><span>SHOP</span></span><FontAwesomeIcon icon={faShoppingCart} className='nav-svg'></FontAwesomeIcon></span>
-                </NavigationItem>
+            {/* <NavigationItem clicked={props.clicked} link='/shop' ><span><span><span>SHOP</span></span><FontAwesomeIcon icon={faShoppingCart} className='nav-svg'></FontAwesomeIcon></span>
+                </NavigationItem> */}
             <NavigationItem clicked={props.clicked} link='/about'><span><span><span>ABOUT</span></span><FontAwesomeIcon icon={faUserSecret} className='nav-svg'></FontAwesomeIcon></span>
                 </NavigationItem>
                 <NavigationItem clicked={props.clicked} link='/contacts' ><span><span><span>CONTACTS</span></span><FontAwesomeIcon icon={faMapMarkerAlt} className='nav-svg'></FontAwesomeIcon></span>

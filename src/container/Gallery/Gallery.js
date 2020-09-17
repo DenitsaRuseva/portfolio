@@ -1,16 +1,14 @@
 import React, {useEffect, useState} from 'react';
-import './Shop.css';
+import './Gallery.css';
 import HeaderContainer from 'components/UI/HeaderContainer/HeaderContainer';
 import InViewListener from 'hoc/InViewListener/InViewListener';
 import Controls from 'components/Shop/Controls/Controls';
-// import axios from 'axios';
 import Images from 'components/Home/FancyGallery/Images/Images';
 import Spinner from 'components/UI/Spinner/Spinner';
 import {fetchData} from '../../utility';
-import ImgLoader from 'components/UI/ImgLoader/ImgLoader';
 
 
-function Shop(props){
+function Gallery(props){
 
    
 
@@ -55,8 +53,8 @@ function Shop(props){
     };
      
     return(
-        <div className='shop'>
-            <div className='shop-header-container'>
+        <div className='gallery'>
+            <div className='gallery-header-container'>
                 <InViewListener>
                     <HeaderContainer header='GALLERY' subtitle='Lorem ipsum nopte bot'/>
                 </InViewListener>
@@ -65,11 +63,11 @@ function Shop(props){
             onFilterImages={filterImagesHandler} 
             removeFilter={removeFilterHandler}
             />
-            <div className='shop-gallery'>
+            <div className='gallery-gallery'>
                 {loading ? <Spinner/> : <Images data={data}/>}
             </div>
         </div>
     );
 };
 
-export default Shop;
+export default Gallery;

@@ -4,7 +4,7 @@ import Toolbar from 'components/Navigation/Toolbar/Toolbar';
 import Logo from 'components/Logo/Logo';
 import Footer from 'components/Footer/Footer';
 
-import Shop from 'container/Shop/Shop';
+import Gallery from 'container/Gallery/Gallery';
 import About from 'components/About/About';
 import Home from 'components/Home/Home';
 import Contacts from 'components/Contacts/Contacts';
@@ -20,7 +20,7 @@ export default function Layout() {
             {/* {props.children} */}
 
             <Switch>
-                <Route path='/shop' component={Shop}/>
+                <Route path='/gallery' component={Gallery}/>
                 <Route path='/about' component={About}/>
                 <Route path='/contacts' component={Contacts}/>
                 <Route path='/' component={Home}/>
