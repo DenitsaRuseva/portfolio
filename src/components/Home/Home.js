@@ -9,11 +9,11 @@ import Button from 'components/UI/Button/Button';
 import './Home.css';
 
 
-export default function home(){
+export default function home(props){
 
 
-    const goToGalleryPage = () => {
-        
+    const goToGalleryHandler = () => {
+        props.history.push('/gallery');
     };
 
 
@@ -21,7 +21,7 @@ export default function home(){
         <div className='home'>
             <div className='home-content'>
                 <div className='home-gallery'>
-                    <FancyGallery/>
+                    <FancyGallery goToGallery={goToGalleryHandler}/>
                 </div>
                 <div className='home-carousels'>
                     <InViewListener>
@@ -31,7 +31,9 @@ export default function home(){
                         <Carousel 
                         url='https://portfolio-f96f5.firebaseio.com/carousel_one.json'
                         header='FIRST HEADER'
-                        text='Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem. Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem. Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem.'/>
+                        text='Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem. Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem. Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem.'
+                        goToGallery={goToGalleryHandler}
+                        />
                         {/* <div className='home-carousel-text-wrapp'>
                             <Paragraphcontainer header='FIRST HEADER'>Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem. Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem. Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem.</Paragraphcontainer>
                             <Button class='btn' type='button' clicked={goToGalleryPage}>VIEW GALLERY &gt;</Button>
@@ -41,13 +43,17 @@ export default function home(){
                         <Carousel 
                         url='https://portfolio-f96f5.firebaseio.com/carousel_two.json'
                         header='SECOND HEADER'
-                        text='Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem. Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem. Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem. Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem. Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem.'/>
+                        text='Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem. Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem. Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem. Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem. Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem.'
+                        goToGallery={goToGalleryHandler}
+                        />
                     </div>
                     <div className='home-carousel'>
                         <Carousel 
                         url='https://portfolio-f96f5.firebaseio.com/carousel_tree.json'
                         header='THIRTH HEADER'
-                        text='Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem. Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem. Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem.'/>
+                        text='Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem. Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem. Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem.'
+                        goToGallery={goToGalleryHandler}
+                        />
                     </div>
                  </div>
                     <About/>

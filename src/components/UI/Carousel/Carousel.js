@@ -35,10 +35,6 @@ export default function Carousel(props){
         showNextSlide();
     }, 4000);
 
-
-    const goToGalleryPage = () => {};
-
-
     console.log('slides:', slides)
     return (
         <Fragment>
@@ -59,7 +55,7 @@ export default function Carousel(props){
         </div>
             <div className='home-carousel-text-wrapp'>
             <Paragraphcontainer header={props.header}>{props.text}</Paragraphcontainer>
-            <Button class='btn' type='button' clicked={goToGalleryPage}>VIEW GALLERY &gt;</Button>
+            <Button class='btn' type='button' clicked={props.goToGallery}>VIEW GALLERY &gt;</Button>
         </div>
         </Fragment>
     );

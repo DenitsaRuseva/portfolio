@@ -20,7 +20,6 @@ export default function FancyGallery(props){
 
     function goToGallery(){
         setActiveBtnIndex(2);
-        window.alert('TO DO');
     };
 
     useEffect(()=>{
@@ -63,7 +62,7 @@ export default function FancyGallery(props){
                 <div className='fancyGallery-buttons-container'>
                         <Button class={actveBtnIndex === 0 ? 'btn active' : 'btn'} clicked={() => showCollectionHandler('coll_one')}>COLLECTION ONE</Button>
                         <Button class={actveBtnIndex === 1 ? 'btn active' : 'btn'} clicked={() => showCollectionHandler('coll_two')}>COLLECTION TWO</Button>
-                        <Button class={actveBtnIndex === 2 ? 'btn active' : 'btn'} clicked={() => goToGallery()}>GO TO GALLERY</Button>
+                        <Button class={actveBtnIndex === 2 ? 'btn active' : 'btn'} clicked={() => {goToGallery(); props.goToGallery()}}>GO TO GALLERY</Button>
                 </div>
             </InViewListener>
             <div className='fancyGallery-gallery'>

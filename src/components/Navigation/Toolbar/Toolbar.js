@@ -27,9 +27,11 @@ import Logo from 'components/Logo/Logo';
     return(
         <div className={attachedClasses.join(' ')}>
 
-            <div className='toolbar-border sm-only'>
+            <div className='toolbar-border sm-only' onClick={toggleMenuHandler}>
                 <span>MENU</span>
-                <DrawerToggle clicked={toggleMenuHandler}/>
+                <DrawerToggle 
+                // clicked={toggleMenuHandler}
+                />
             </div>
             <NavigationItems clicked={toggleMenuHandler}/>
             <div className='desk-only'>
