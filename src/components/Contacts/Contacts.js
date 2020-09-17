@@ -47,7 +47,7 @@ export default function Contacts(props){
                 type: 'text',
                 name: 'message',
                 label: true,
-                rows: 20,
+                rows: 13,
                 cols: 50
             },
             valid: false,

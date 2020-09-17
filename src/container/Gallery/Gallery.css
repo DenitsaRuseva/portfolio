@@ -14,3 +14,9 @@ div.gallery-gallery{
     min-height: 100vh;
     z-index: 3;
 }
+
+@media only screen and (min-width: 992px){
+    div.gallery{
+        padding-top: 5rem;
+    }
+}
