@@ -5,7 +5,6 @@ import './FancyGallery.css';
 import InViewListener from 'hoc/InViewListener/InViewListener';
 import Images from './Images/Images';
 import Spinner from 'components/UI/Spinner/Spinner';
-import axios from 'axios';
 import {fetchData} from '../../../utility';
 
 
@@ -46,7 +45,6 @@ export default function FancyGallery(props){
     };
 
 
-    console.log("data: ", data);
     let content = <Spinner/>;
     if(!loading){
         content = <Images data={data}/>;

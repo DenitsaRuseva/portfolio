@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './Layout.css';
 import Toolbar from 'components/Navigation/Toolbar/Toolbar';
 import Logo from 'components/Logo/Logo';
