@@ -1,21 +1,21 @@
 div.img-wrapp{
-    display: flex;
+    /* display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
+    align-items: center; */
     width: 100%;
 }
 
-@media only screen and (min-width: 400px){
+@media only screen and (min-width: 600px){
     div.img-wrapp{
-        display: block;
+        /* display: block; */
         column-count: 2;
         column-gap: 0px;
     }
 }
 
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 992px){
     div.img-wrapp{
         column-count: 3;
     }

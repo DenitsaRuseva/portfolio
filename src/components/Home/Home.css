@@ -104,10 +104,6 @@ div.home-carousel.right > div.home-carousel-text-wrapp{
     margin: 0 0 0 auto;
 }
 
-.home-compensator{
-    height: calc(100vh - 9rem);
-}
-
 @media only screen and (min-width: 768px){
     div.home-carousels{
         padding: 0;
@@ -138,8 +134,5 @@ div.home-carousel.right > div.home-carousel-text-wrapp{
     }
     .home-content{
         top: 100vh;
-    }
-    .home-compensator{
-        height: 100vh;
     }
 }

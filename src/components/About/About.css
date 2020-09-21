@@ -1,9 +1,10 @@
 .about {
     position: relative;
+    bottom: calc(100vh - 9rem);
     z-index: 3;
     display: inline-flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -18,20 +19,38 @@
     width: 100%;
     /* background: black; */
     z-index: 3;
+    margin-bottom: 50px;
 }
 
+div.about div.about-img-text-wrapp{
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
 
 .about-text-container{
     width: 100%;
-    padding-right: 35px;
+    /* padding-right: 35px; */
 }
 
-.about > .about-img-container > div.about-img-wrapp{
+.about-text-container .paragraph-container h3{
+    text-align: center;
+}
+.about-text-container .paragraph-container p{
+    text-align: center;
+}
+
+div.about div.about-img-container {
+    margin-bottom: 30px;
+    /* padding: 60px 0 30px 0; */
+}
+
+.about > .about-img-text-wrapp > .about-img-container > div.about-img-wrapp{
     display: inline-block;
     position: relative;
 }
 
-.about > .about-img-container > div.about-img-wrapp > svg {
+.about > .about-img-text-wrapp > .about-img-container > div.about-img-wrapp > svg {
     display: block;
     width: 250px;
     max-width: 100%;
@@ -42,27 +61,60 @@
 
 @media only screen and (min-width: 768px){
     .about{
-        bottom: 0;
-        align-items: flex-start;
+        /* bottom: 0; */
+        /* flex-direction: row;
+        flex-wrap: wrap; */
+        justify-content: flex-start;
         /* overflow: hidden; */
         min-height: calc(100vh - 58px);
     }
-    .about-img-container{
-        position: relative;
+    div.about-header-container{
+        /* margin-bottom: 20px; */
+    }
+    div.about div.about-img-text-wrapp{
+        align-self: flex-end;
+        /* flex-direction: row; */
+    }
+    div.about div.about-img-container{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
         z-index: 3;
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        margin: 0;
         background: black;
     }
-    .about-img-container, 
-    .about-text-container{
+
+
+
+    div.about div.about-img-container, 
+    div.about div.about-text-container{
         width: 50%;
         /* margin-top: 20px; */
-        padding-top: 20px;
+        /* padding-top: 20px; */
+    }
+    div.about div.about-text-container{
+        float: right;
+        padding-right: 35px;
+    }
+    div.about div.about-img-container div.about-img-wrapp{
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    div.about div.about-text-container .paragraph-container h3,
+    div.about div.about-text-container .paragraph-container p{
+        text-align: left;
     }
 }
 
 
 @media only screen and (min-width: 992px){
     div.about {
+        bottom: 100vh;
         padding-top: 5rem;
         min-height: 100vh;
     }
