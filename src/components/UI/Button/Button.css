@@ -10,8 +10,21 @@
     overflow: hidden;
     transition: color 0.5s;
     z-index: 3;
+    cursor: pointer;
 }
 
+.btn.disabled{
+    background: gray;
+    cursor: not-allowed;
+}
+.btn.disabled::after,
+.btn.disabled::before{
+    background: gray;
+    cursor: not-allowed;
+}
+.btn.disabled:hover{
+    color: white;
+}
 /* .btn.active{
     background: #ffffff;
 } */

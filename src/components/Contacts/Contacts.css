@@ -3,7 +3,7 @@
     z-index: 3;
     width: 100%;
     min-height: calc(100vh - 58px);
-    padding-top: 13px;
+    padding: 13px 10px 0 10px;
     background: rgba(0,0,0,1);
     color: gray;
 }

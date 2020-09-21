@@ -8,8 +8,10 @@ import {faPhoneSquare, faEnvelope} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {updateObject, checkValidity} from '../../utility';
 
-export default function Contacts(props){
+export default function Contacts(){
+
     const [formIsValid, setFormIsValid] = useState(false);
+
     const [form, setForm] = useState({
         name: {
             elType: 'input',
@@ -66,11 +68,20 @@ export default function Contacts(props){
         const inputValue = event.target.value;
         const isValid = checkValidity(inputValue, form[inputName].validation);
         const updatedInput = updateObject(form[inputName], {value: inputValue, valid: isValid, tuched: true});
+        // const updatedFormIsValid = checkFormValidity();
         const updatedForm = updateObject(form, {[inputName]: updatedInput});
         setForm(updatedForm);
+        // setFormIsValid(updatedFormIsValid);
 
     };
 
+    const checkFormValidity = () => {
+        let formIsValid = true;
+        for(let key in form){
+            formIsValid = formIsValid && form[key].valid === true;
+        };
+        return formIsValid;
+    };
 
     const formElements = [];
     for(let el in form){
@@ -89,7 +100,6 @@ export default function Contacts(props){
     };
 
 
-    console.log(form)
 
     return(
         <div className='contacts'>
@@ -100,26 +110,25 @@ export default function Contacts(props){
                         <div className='contacts-details-wrapp'>
                             <div>
                                 <FontAwesomeIcon icon={faPhoneSquare}/>
-                                <span>Phone: +359 878 6783</span>
+                                <span>Phone: +000 000 000</span>
                             </div>
                             <div>
                                 <FontAwesomeIcon icon={faEnvelope}/>
-                                <span>E-mail: desi@dkjfkl.jd</span>
+                                <span>E-mail: email@test.com</span>
                             </div>
                             <div>
                                 <FontAwesomeIcon icon={faFacebookSquare}/>
-                                <span>Facebook: facebook/desislavaRuseva</span>
+                                <span>Facebook: facebook/user</span>
                             </div>
                         </div>
                     </div>
-    
                     <div className='contact-form-container'>
                         <form>
                             {formElements}
                         </form>
                     </div>
                     <div className='contact-btn-container'>
-                            <Button class='btn'>SEND</Button>
+                        <Button class={checkFormValidity() ? 'btn' : 'btn disabled'}>SEND</Button>
                     </div>
                 </InViewListener>
             </div>
