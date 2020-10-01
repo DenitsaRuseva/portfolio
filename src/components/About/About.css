@@ -14,9 +14,9 @@
     /* padding: 0 35px 0 30px; */
 }
 
-div.home div.about{
+/* div.home div.about{
     bottom: calc(100vh - 9rem);
-}
+} */
 
 .about-header-container{
     position: relative;
@@ -121,7 +121,7 @@ div.about div.about-img-container {
         padding-top: 5rem;
         min-height: 100vh;
     }
-    div.home div.about {
+    /* div.home div.about {
         bottom: 100vh;
-    }
+    } */
 }

@@ -1,6 +1,7 @@
 .home{
     position: relative;
     width: 100%;
+    padding-bottom: calc(100vh - 9rem);
     color: white;
     /* background: rgba(0,0,0,0.7); */
 }
@@ -123,6 +124,9 @@ div.home-carousel.right > div.home-carousel-text-wrapp{
 }
 
 @media only screen and (min-width: 992px){
+    div.home{
+        padding-bottom: 100vh;
+    }
     div.home-carousels{
         padding: 0 20px;
     }

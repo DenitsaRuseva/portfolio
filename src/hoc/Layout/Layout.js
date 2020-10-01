@@ -3,7 +3,6 @@ import './Layout.css';
 import Toolbar from 'components/Navigation/Toolbar/Toolbar';
 import Logo from 'components/Logo/Logo';
 import Footer from 'components/Footer/Footer';
-
 import Gallery from 'container/Gallery/Gallery';
 import About from 'components/About/About';
 import Home from 'components/Home/Home';
