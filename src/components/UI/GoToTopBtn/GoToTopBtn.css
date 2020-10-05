@@ -1,0 +1,40 @@
+div.top-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 900;
+    bottom: 215px;
+    right: 25px;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid white;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.7);
+    opacity: 0;
+    visibility: hidden;
+    cursor: pointer;
+    transition: opacity 0.4s;
+}
+
+div.top-btn:hover{
+    border: 1px solid #e6e6e6;
+    transform: scale(1.1);
+}
+div.top-btn svg{
+    color: #cccccc;
+}
+div.top-btn:hover svg{
+    color: #e6e6e6;
+}
+
+div.top-btn.show{
+    visibility: visible;
+    opacity: 1;
+}
+
+@media only screen and (min-width: 768px){
+    div.top-btn{
+        bottom: 65px;
+    }
+}

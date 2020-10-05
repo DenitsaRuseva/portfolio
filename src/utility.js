@@ -12,9 +12,7 @@ export function fetchData(url, cb){
 //   fetchData(url, cb);
 // };
 
-export function useInterval(callback, delay, stopInterval) {
- console.log(stopInterval)
-  const lastIntervalId = useRef(null);
+export function useInterval(callback, delay) {
   const savedCallback = useRef();
 
   // Remember the latest callback.
@@ -28,14 +26,8 @@ export function useInterval(callback, delay, stopInterval) {
       savedCallback.current();
     }
     if (delay !== null) {
-      console.log(stopInterval)
-
-      if(stopInterval === true){
-        clearInterval(lastIntervalId.current);
-      };
-      // let id = setInterval(tick, delay);
-      lastIntervalId.current = setInterval(tick, delay);
-      return () => clearInterval(lastIntervalId.current);
+      let id = setInterval(tick, delay);
+      return () => clearInterval(id);
     }
   }, [delay]);
 };
