@@ -1,17 +1,17 @@
-import React, {Fragment, useEffect, useState} from 'react';
+import React,{Fragment, useEffect, useRef, useState} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight} from '@fortawesome/free-solid-svg-icons';
-import './Carousel.css';
-import {useInterval} from '../../../utility';
+import {fetchData, useInterval} from '../../../../utility';
 import Paragraphcontainer from 'components/UI/ParagraphContainer/ParagraphContainer';
 import Button from 'components/UI/Button/Button';
-import {fetchData} from '../../../utility';
+
 
 
 export default function Carousel(props){
 
     const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
     const [slides, setSlides] = useState([]);
+    const resetInterval = useRef(false);
 
     useEffect(() => {
         fetchData(props.url, (data, err) => {
@@ -21,7 +21,10 @@ export default function Carousel(props){
         })
     }, []);
         
+
+
     const showNextSlide = () => {
+        resetInterval.current = true;
         const newIndex = (currentSlideIndex + 1) % slides.length;
         setCurrentSlideIndex(newIndex);
     };
@@ -31,11 +34,16 @@ export default function Carousel(props){
         setCurrentSlideIndex(newIndex);
     };
 
-    useInterval(() => {
-        showNextSlide();
-    }, 4000);
 
-    console.log('slides:', slides)
+    console.log(resetInterval.current)
+
+    useInterval(() => {
+        const newIndex = (currentSlideIndex + 1) % slides.length;
+        setCurrentSlideIndex(newIndex);
+    }, 4000, resetInterval.current);
+
+    console.log('slides:', slides);
+
     return (
         <Fragment>
         <div className='carousel'>

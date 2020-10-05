@@ -8,6 +8,7 @@ div.carousel{
     position: relative;
     width: 100%;
     padding-bottom: 56.25%;
+    overflow: hidden;
 }
 
 .carousel > div.slide-container > img.slide{

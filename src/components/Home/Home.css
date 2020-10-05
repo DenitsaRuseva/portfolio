@@ -102,7 +102,7 @@ div.home-carousel > div.home-carousel-text-wrapp{
 }
 
 div.home-carousel.right > div.home-carousel-text-wrapp{
-    margin: 0 0 0 auto;
+    /* margin: 0 0 0 auto; */
 }
 
 @media only screen and (min-width: 768px){
@@ -111,12 +111,21 @@ div.home-carousel.right > div.home-carousel-text-wrapp{
     }
     div.home-carousel {
         align-items: center;
+        max-width: 1800px;
         padding: 0;
+        margin: 0 auto;
     }
     div.home-carousel > div.carousel,
     div.home-carousel > div.home-carousel-text-wrapp{
         width: 50%;
         /* margin: 0 auto 0 0; */
+    }
+    div.home-carousel > div.home-carousel-text-wrapp{
+        margin: 0;
+        margin-right: auto;
+    }
+    div.home-carousel.right > div.home-carousel-text-wrapp{
+        margin: 0 0 0 auto;
     }
     div.home-carousel.right > div.carousel{
         order: 2;
