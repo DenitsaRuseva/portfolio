@@ -9,6 +9,7 @@ import Home from 'components/Home/Home';
 import Contacts from 'components/Contacts/Contacts';
 import {Switch, Route} from 'react-router-dom';
 import GoToTopBtn from 'components/UI/GoToTopBtn/GoToTopBtn';
+import NotFound from 'components/404/404';
 
 
 export default function Layout() {
@@ -58,7 +59,8 @@ export default function Layout() {
                 <Route path='/gallery' render={() => <Fragment><Gallery/><GoToTopBtn show={showTopBtn} clicked={goToTopHandler}/></Fragment>}/>
                 <Route path='/about' component={About}/>
                 <Route path='/contacts' component={Contacts}/>
-                <Route path='/' render={() => <Fragment><Home/><GoToTopBtn show={showTopBtn} clicked={goToTopHandler}/></Fragment>}/>
+                <Route path='/' exact render={() => <Fragment><Home/><GoToTopBtn show={showTopBtn} clicked={goToTopHandler}/></Fragment>}/>
+                <Route path='/' component={NotFound}/>
             </Switch>
         </main>
         <Footer/>
