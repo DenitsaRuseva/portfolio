@@ -83,6 +83,10 @@ export default function Contacts(){
         return formIsValid;
     };
 
+    const resetForm = () => {
+        
+    };
+
     const formElements = [];
     for(let el in form){
         formElements.push(
@@ -128,7 +132,7 @@ export default function Contacts(){
                         </form>
                     </div>
                     <div className='contact-btn-container'>
-                        <Button class={checkFormValidity() ? 'btn' : 'btn disabled'}>SEND</Button>
+                        <Button class={checkFormValidity() ? 'btn' : 'btn disabled'} clicked={resetForm}>SEND</Button>
                     </div>
                 </InViewListener>
             </div>

@@ -9,8 +9,8 @@ export default function footer(){
         <div className='footer'>
             <Line/>
             <Link to='/contacts'>CONTACTS</Link>
-            <Link to='/contacts'>PRIVACY POLICY</Link>
-            <Link to='/contacts'>TERMS OF USE</Link>
+            <Link to='/privacy'>PRIVACY POLICY</Link>
+            <Link to='/terms'>TERMS OF USE</Link>
             <Link to='/return'>RETURN POLICY</Link>
             <Link to='/about'>ABOUT ME</Link>
             
