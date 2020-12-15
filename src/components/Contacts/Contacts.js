@@ -63,6 +63,23 @@ export default function Contacts(){
         }
     });
 
+    const resetForm = () => {
+        let updatedForm = {};
+        for(let key in form){
+            const updatedConfig = {...form[key].config};
+            const updatedValidation ={...form[key].validation};
+            updatedForm[key] = {
+                ...form[key],
+                config: updatedConfig,
+                validation: updatedValidation,
+                value: '',
+                valid: false,
+                tuched: false
+            };
+        };
+        setForm(updatedForm);
+    };
+
     const inputChangeHandler = (event) => {
         const inputName = event.target.name;
         const inputValue = event.target.value;
@@ -83,9 +100,7 @@ export default function Contacts(){
         return formIsValid;
     };
 
-    const resetForm = () => {
-        
-    };
+
 
     const formElements = [];
     for(let el in form){
