@@ -64,7 +64,7 @@ function Gallery(props){
             removeFilter={removeFilterHandler}
             />
             <div className='gallery-gallery'>
-                {loading ? <Spinner/> : <Images data={data}/>}
+                {loading ? <Spinner/> : <Images data={data} error={error}/>}
             </div>
         </div>
     );

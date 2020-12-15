@@ -4,7 +4,6 @@ import ImgLoader from 'components/UI/ImgLoader/ImgLoader';
 
 
 export default function images(props){
-    console.log(props.data);
 
     const makeImg = (el, id) => {
         try {
@@ -26,7 +25,7 @@ export default function images(props){
    
     return (
         <div className='img-wrapp'>
-            {images}
+            {props.error ? <div style={{position: 'absolute', top: '0', left: '0', right: '0', display: 'inline-block', width: '100%', textAlign: 'center'}}>{props.error.message}</div> : images}
         </div>
     );
 }; 
