@@ -47,8 +47,15 @@ export default function Controls(props){
         setShowBackdrop(!showBackdrop);
     };
     const chooseOptionHandler = (formProperty, value) => {
+        if(form[formProperty].value === value){
+            return;
+        };
+        let updatedForm = {...form};
+        for(let i in form){
+            updatedForm[i] =  updateObject(form[i], {value: 'select'}); 
+        };
         const updatedField = updateObject(form[formProperty], {value: value, showOptions: false});
-        const updatedForm = updateObject(form, {[formProperty]: updatedField});
+        updatedForm = updateObject(updatedForm, {[formProperty]: updatedField});
         setForm(updatedForm);
         setShowBackdrop(!showBackdrop);
         if(value === 'select'){
