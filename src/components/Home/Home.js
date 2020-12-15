@@ -4,12 +4,11 @@ import About from 'components/About/About';
 import Carousels from 'components/UI/Carousels/Carousels';
 import HeaderContainer from 'components/UI/HeaderContainer/HeaderContainer';
 import InViewListener from 'hoc/InViewListener/InViewListener';
-import Paragraphcontainer from 'components/UI/ParagraphContainer/ParagraphContainer';
-import Button from 'components/UI/Button/Button';
+import {withRouter} from 'react-router-dom';
 import './Home.css';
 
 
-export default function home(props){
+function home(props){
 
 
     const goToGalleryHandler = () => {
@@ -35,3 +34,5 @@ export default function home(props){
         </div>
     );
 };
+
+export default withRouter(home);
