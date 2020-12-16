@@ -1,12 +1,9 @@
-
 .header-container{
     position: relative;
     margin: 0;
     padding: 42px 0 10px 0;
     width: 100%;
-    /* height: 8rem; */
     color: inherit;
-    /* font-family: monospace; */
 }
 
 .home-carousels .header-container{
@@ -19,26 +16,18 @@
     left: 0;
     right: 0;
     width: 100%;
-    /* height: 8rem; */
     opacity: 0;
     overflow: hidden;
 }
 
-/* .home-carousels .header-container > .text-wrapp,
-.about .header-container > .text-wrapp{
-    padding: 30px 0;
-} */
-
-
 
 div.inViewListener.show-component .header-container > .text-wrapp {
-    animation: flipInX 1.3s forwards;
+    -webkit-animation: flipInX 1.3s forwards;
+            animation: flipInX 1.3s forwards;
 }
 
 .header-container h1 {
-    /* height: 5rem; */
     margin: 0;
-    /* margin-bottom: 10px; */
     line-height: 5rem;
     font-family: monospace;
     font-size: 4rem;
@@ -47,7 +36,6 @@ div.inViewListener.show-component .header-container > .text-wrapp {
 }
 
 .header-container p {
-    /* height: 2rem; */
     margin: 0;
     text-align: center;
     line-height: 2rem;
@@ -61,17 +49,26 @@ div.inViewListener.show-component .header-container > .text-wrapp {
     position: absolute;
     left: 0;
     bottom: 0;
-    /* width: 100%; */
     width: 0px;
     height: 2px;
+    background: -webkit-gradient(linear, right top, left top, from(black),color-stop(#b3b3b3), color-stop(black), color-stop(black),color-stop(#b3b3b3),to(black));
+    background: -o-linear-gradient(right, black,#b3b3b3, black, black,#b3b3b3,black);
     background: linear-gradient(to left, black,#b3b3b3, black, black,#b3b3b3,black);
+    -webkit-transition: width 0.4s;
+    -o-transition: width 0.4s;
     transition: width 0.4s;
 }
 .header-container::before{
     content: '\2727';
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     position: absolute;
     left: 50%;
     top: calc(100% - 0.5em);
@@ -83,7 +80,11 @@ div.inViewListener.show-component .header-container > .text-wrapp {
     font-family: monospace;
     color: #b3b3b3;
     opacity: 0;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    -webkit-transition: opacity 0.7s ease-in-out;
+    -o-transition: opacity 0.7s ease-in-out;
     transition: opacity 0.7s ease-in-out;
 }
 
@@ -97,15 +98,16 @@ div.inViewListener.show-component .header-container::before{
 .text-divider {
     position: relative;
     width: 80%;
-    /* height: 1px; */
     margin: 0 auto;
     max-width: 300px;
-    transform: rotate(180deg);
-    /* box-shadow: 0 0 3px white; */
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
 }
 
 .text-divider > svg {
-    transform: rotateX(-70deg);
+    -webkit-transform: rotateX(-70deg);
+            transform: rotateX(-70deg);
 }
 
 @media only screen and (min-width: 756px){
@@ -123,21 +125,48 @@ div.inViewListener.show-component .header-container::before{
     }
 }
 
-@keyframes flipInX {
+@-webkit-keyframes flipInX {
     0% {
-       transform: perspective(400px) rotateX(90deg);
+       -webkit-transform: perspective(400px) rotateX(90deg);
+               transform: perspective(400px) rotateX(90deg);
        opacity: 0;
     }
     40% {
-       transform: perspective(400px) rotateX(-10deg);
+       -webkit-transform: perspective(400px) rotateX(-10deg);
+               transform: perspective(400px) rotateX(-10deg);
        opacity: 1;
     }
     70% {
-       transform: perspective(400px) rotateX(10deg);
+       -webkit-transform: perspective(400px) rotateX(10deg);
+               transform: perspective(400px) rotateX(10deg);
        opacity: 0.5;
     }
     100% {
-       transform: perspective(400px) rotateX(0deg);
+       -webkit-transform: perspective(400px) rotateX(0deg);
+               transform: perspective(400px) rotateX(0deg);
+       opacity: 1;
+    }
+ }
+
+@keyframes flipInX {
+    0% {
+       -webkit-transform: perspective(400px) rotateX(90deg);
+               transform: perspective(400px) rotateX(90deg);
+       opacity: 0;
+    }
+    40% {
+       -webkit-transform: perspective(400px) rotateX(-10deg);
+               transform: perspective(400px) rotateX(-10deg);
+       opacity: 1;
+    }
+    70% {
+       -webkit-transform: perspective(400px) rotateX(10deg);
+               transform: perspective(400px) rotateX(10deg);
+       opacity: 0.5;
+    }
+    100% {
+       -webkit-transform: perspective(400px) rotateX(0deg);
+               transform: perspective(400px) rotateX(0deg);
        opacity: 1;
     }
  } 

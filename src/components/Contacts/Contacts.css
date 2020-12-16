@@ -17,7 +17,8 @@ div.contacts::after{
     bottom: 0;
     background-image: url('../../assets/images/map-of-the-world-2401458_1920.jpg');
     background-position: center;
-    filter: grayscale(80%);
+    -webkit-filter: grayscale(80%);
+            filter: grayscale(80%);
     z-index: -1;
     opacity: 0.1;
 }
@@ -27,14 +28,22 @@ div.contacts > div.contacts-wrapp{
 }
 
 div.contacts > div.contacts-wrapp div.contacts-details{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 458px;
     max-width: 100%;
     /* padding: 15px 0px 40px 0px; */
     margin: 0 auto;
     opacity: 0;
+    -webkit-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
     transition: opacity 0.5s;
 }
 
@@ -62,10 +71,19 @@ div.contacts > div.contacts-wrapp div.contacts-details > div.contacts-details-wr
 
 
 div.contacts div.inViewListener{
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     max-width: 100%;
 }
 
@@ -75,6 +93,8 @@ div.contacts div.inViewListener{
     opacity: 0;
     font-size: 2.5rem;
     font-weight: 400;
+    -webkit-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
     transition: opacity 0.5s;
 }
 
@@ -85,9 +105,14 @@ div.contacts div.inViewListener{
 
 div.contact-form-container{
     position: relative;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     border: 1px solid #660033;
     max-width: 100%;
     padding: 8px 29px;
@@ -116,8 +141,12 @@ div.contacts > div.contacts-wrapp div.contact-btn-container .btn{
 @media only screen and (min-width: 800px){
   
     div.contacts div.inViewListener{
-        flex-direction: row;
-        flex-wrap: wrap;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
         width: 100%;
         max-width: 800px;
         padding: 0 20px;
@@ -129,20 +158,30 @@ div.contacts > div.contacts-wrapp div.contact-btn-container .btn{
         text-align: left;
     }
     div.contact-form-container {
-        flex: 60%;
+        -webkit-box-flex: 60%;
+            -ms-flex: 60%;
+                flex: 60%;
         max-width: 400px;
         /* margin-left: 20px; */
     }
 
     div.contacts > div.contacts-wrapp div.contact-btn-container {
-        order: 3;
+        -webkit-box-ordinal-group: 4;
+            -ms-flex-order: 3;
+                order: 3;
         width: 100%;
     }
 
     div.contacts > div.contacts-wrapp div.contacts-details{
-        order: 2;
-        flex: 40%;
-        justify-content: center;
+        -webkit-box-ordinal-group: 3;
+            -ms-flex-order: 2;
+                order: 2;
+        -webkit-box-flex: 40%;
+            -ms-flex: 40%;
+                flex: 40%;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         /* padding-top: 0px; */
 
     }
@@ -156,4 +195,3 @@ div.contacts > div.contacts-wrapp div.contact-btn-container .btn{
     }
     
 }
-

@@ -8,6 +8,8 @@
     height: 0px;
     overflow: hidden;
     border-bottom: 1px solid white;
+    -webkit-transition: height 0.5s ease-out;
+    -o-transition: height 0.5s ease-out;
     transition: height 0.5s ease-out;
     z-index: 1000;
 }
@@ -20,11 +22,18 @@
     .toolbar .navigation-items{
         height: 6rem;
         border-bottom: none;
-        perspective: 500px;
+        -webkit-perspective: 500px;
+                perspective: 500px;
         /* background: black; */
-        transform: rotateX(90deg); 
-        transform-style: preserve-3d; 
-        transition: transform 1s;
+        -webkit-transform: rotateX(90deg);
+                transform: rotateX(90deg); 
+        -webkit-transform-style: preserve-3d; 
+                transform-style: preserve-3d; 
+        -webkit-transition: -webkit-transform 1s; 
+        transition: -webkit-transform 1s; 
+        -o-transition: transform 1s; 
+        transition: transform 1s; 
+        transition: transform 1s, -webkit-transform 1s;
         
     }
     .toolbar.show-menu .navigation-items{
@@ -33,7 +42,8 @@
         padding-top: 3rem;
 
         background: black;
-        transform: rotateX(0deg);
+        -webkit-transform: rotateX(0deg);
+                transform: rotateX(0deg);
 
 
     }

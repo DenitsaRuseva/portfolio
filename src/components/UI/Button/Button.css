@@ -8,6 +8,8 @@
 	letter-spacing: 0.1rem;
     color: white;
     overflow: hidden;
+    -webkit-transition: color 0.5s;
+    -o-transition: color 0.5s;
     transition: color 0.5s;
     z-index: 3;
     cursor: pointer;
@@ -93,6 +95,8 @@ div.inViewListener.show-component .fancyGallery-buttons-container .btn span::aft
     width: 0px;
     background: #ffffff;
     cursor: pointer;
+    -webkit-transition: width 0.3s cubic-bezier(1,1.82,.92,-0.03);
+    -o-transition: width 0.3s cubic-bezier(1,1.82,.92,-0.03);
     transition: width 0.3s cubic-bezier(1,1.82,.92,-0.03);
 }
 

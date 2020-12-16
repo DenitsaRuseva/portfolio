@@ -1,6 +1,5 @@
 .fancyGallery{
     padding: 20px 10px;
-    /* padding: 20px 0; */
 }
 
 
@@ -10,26 +9,23 @@
 .fancyGallery-gallery{
     width: 100%;
 }
-/* 
-.fancyGallery div.inViewListener{
-    position: relative;
-    z-index: 2;
-    background: #000000;
-} */
-
-
-
 
 .fancyGallery-buttons-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     position: relative;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     max-width: 530px;
     margin: 0px auto;
     padding: 20px 20px 0px 20px;
-    /* z-index: 2; */
 }
 
 
@@ -37,12 +33,14 @@
     content: '';
     position: absolute;
     left: 0;
-    /* right: -100%; */
     bottom: -2px;
     width: 0px;
-    /* width: 100%; */
     height: 2px;
+    background: -webkit-gradient(linear, right top, left top, from(black), color-stop(#d9d9d9), to(black));
+    background: -o-linear-gradient(right, black, #d9d9d9, black);
     background: linear-gradient(to left, black, #d9d9d9, black);
+    -webkit-transition: width 0.4s;
+    -o-transition: width 0.4s;
     transition: width 0.4s;
 }
 
@@ -55,31 +53,18 @@ div.inViewListener.show-component .fancyGallery-buttons-container::after{
 
 .fancyGallery-gallery{
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 100%;
     min-height: 70vh;
     padding-top: 52px;
 }
-/* .fancyGallery-gallery::after{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: url('../../../assets/images/18699703_264620794006794_5410145634690834259_o.jpg') no-repeat center center;
-   background-attachment: fixed;
-   z-index: 1;
-   transform: translateZ(-1px) scale(1.5);
-} */
-
-
-/* .fancyGallery-gallery > div {
-    position: relative;
-    margin: 20px;
-    z-index: 2;
-} */

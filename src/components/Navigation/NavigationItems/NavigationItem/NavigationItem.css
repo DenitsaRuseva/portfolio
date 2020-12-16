@@ -20,16 +20,28 @@ a.navigation-item svg.nav-svg{
 
 @media only screen and (min-width: 992px){
     a.navigation-item{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         width: 25%;
         height: 6rem;
         float: left;
         padding: 0px;
-        transform: rotateX(90deg);
-        transform-style: preserve-3d;
+        -webkit-transform: rotateX(90deg);
+                transform: rotateX(90deg);
+        -webkit-transform-style: preserve-3d;
+                transform-style: preserve-3d;
+        -webkit-transition: -webkit-transform 1s;
+        transition: -webkit-transform 1s;
+        -o-transition: transform 1s;
         transition: transform 1s;
+        transition: transform 1s, -webkit-transform 1s;
         border: none;
     }
 
@@ -46,7 +58,8 @@ a.navigation-item svg.nav-svg{
 
 
     .toolbar.show-menu .navigation-items a.navigation-item{
-        transform: rotateX(0deg);
+        -webkit-transform: rotateX(0deg);
+                transform: rotateX(0deg);
     }
 
     a.navigation-item > span {
@@ -82,6 +95,8 @@ a.navigation-item svg.nav-svg{
         text-align: center;
         /* visibility: hidden; */
         color: black;
+        -webkit-transition: width 0.3s, height 0.3s;
+        -o-transition: width 0.3s, height 0.3s;
         transition: width 0.3s, height 0.3s;
         z-index: 500;
     }
@@ -118,6 +133,8 @@ a.navigation-item svg.nav-svg{
         left: 0px;
         height: 1.1rem;
         color: transparent;
+        -webkit-transition: left 0.2s;
+        -o-transition: left 0.2s;
         transition: left 0.2s;
     }
     a.navigation-item > span > span > span::after{

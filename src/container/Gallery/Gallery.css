@@ -1,14 +1,10 @@
 div.gallery{
-    /* padding-top: 20px; */
-    /* height: 100vh;  */
-    /*  TO REMOVE!!!!!!!!*/
     min-height: calc(100vh - 58px);
     background: black;
 }
 
 div.gallery-gallery{
     position: relative;
-    /* margin-top: 50px; */
     padding: 50px 15px 0 15px;
     width: 100%;
     min-height: 100vh;
