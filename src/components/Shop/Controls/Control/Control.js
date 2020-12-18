@@ -1,6 +1,6 @@
 import React from 'react';
 import './Control.css'
-import {faBahai, faWindowClose, faChevronDown, faSun} from '@fortawesome/free-solid-svg-icons';
+import {faWindowClose, faChevronDown, faSun} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function control(props){

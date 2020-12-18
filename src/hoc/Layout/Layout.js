@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useReducer, useRef, useState } from 'react';
+import React, { Fragment, useEffect, useRef, useState } from 'react';
 import './Layout.css';
 import Toolbar from 'components/Navigation/Toolbar/Toolbar';
 import Logo from 'components/Logo/Logo';
@@ -53,8 +53,6 @@ export default function Layout() {
         <Logo/>
         <Toolbar/>
         <main>
-            {/* {props.children} */}
-
             <Switch>
                 <Route path='/gallery' render={() => <Fragment><Gallery/><GoToTopBtn show={showTopBtn} clicked={goToTopHandler}/></Fragment>}/>
                 <Route path='/about' component={About}/>

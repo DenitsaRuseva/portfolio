@@ -1,18 +1,9 @@
-import React, {Fragment, useEffect, useState} from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronLeft, faChevronRight} from '@fortawesome/free-solid-svg-icons';
+import React, {Fragment} from 'react';
 import './Carousels.css';
-import {useInterval} from '../../../utility';
-import Paragraphcontainer from 'components/UI/ParagraphContainer/ParagraphContainer';
-import Button from 'components/UI/Button/Button';
-import {fetchData} from '../../../utility';
 import Carousel from './Carousel/Carousel';
 
 
 export default function Carousels(props){
-
-   
-
 
     return (
         <Fragment>
@@ -23,10 +14,6 @@ export default function Carousels(props){
                         text='Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem. Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem. Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem.'
                         goToGallery={props.goToGallery}
                         />
-                        {/* <div className='home-carousel-text-wrapp'>
-                            <Paragraphcontainer header='FIRST HEADER'>Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem. Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem. Lorem ipsum aklods predato ver simte amet guste rome propten apen ven little sin a dten do retnem.</Paragraphcontainer>
-                            <Button class='btn' type='button' clicked={goToGalleryPage}>VIEW GALLERY &gt;</Button>
-                        </div> */}
                     </div>
                     <div className='home-carousel right'>
                         <Carousel 

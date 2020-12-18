@@ -6,6 +6,7 @@ import Controls from 'components/Shop/Controls/Controls';
 import Images from 'components/Home/FancyGallery/Images/Images';
 import Spinner from 'components/UI/Spinner/Spinner';
 import {fetchData} from '../../utility';
+import { Fragment } from 'react';
 
 
 function Gallery(props){
@@ -28,7 +29,7 @@ function Gallery(props){
             setLoading(false);
         } else {
             setError(err);
-            setLoading(false);
+            // setLoading(false);
         };
     };
     const filterImagesHandler = (filter, value) => {
@@ -64,7 +65,15 @@ function Gallery(props){
             removeFilter={removeFilterHandler}
             />
             <div className='gallery-gallery'>
-                {loading ? <Spinner/> : <Images data={data} error={error}/>}
+                {loading ? <Fragment><Spinner/><div className='g-img-container hidden'></div></Fragment> : 
+                <Fragment>
+                    <div className='spinner-container'>
+                        <Spinner/>
+                    </div>
+                    <div className='g-img-container'>
+                        <Images data={data} error={error}/>
+                    </div>
+                </Fragment>}
             </div>
         </div>
     );

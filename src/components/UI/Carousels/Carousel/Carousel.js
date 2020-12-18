@@ -34,15 +34,10 @@ export default function Carousel(props){
         setCurrentSlideIndex(newIndex);
     };
 
-
-    console.log(resetInterval.current)
-
     useInterval(() => {
         const newIndex = (currentSlideIndex + 1) % slides.length;
         setCurrentSlideIndex(newIndex);
     }, 4000, resetInterval.current);
-
-    console.log('slides:', slides);
 
     return (
         <Fragment>

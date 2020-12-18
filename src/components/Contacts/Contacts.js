@@ -10,8 +10,6 @@ import {updateObject, checkValidity} from '../../utility';
 
 export default function Contacts(){
 
-    const [formIsValid, setFormIsValid] = useState(false);
-
     const [form, setForm] = useState({
         name: {
             elType: 'input',

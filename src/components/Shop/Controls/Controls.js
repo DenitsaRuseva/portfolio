@@ -1,7 +1,5 @@
 import React, {useState} from 'react';
 import './Controls.css';
-import {faPaintBrush, faFlask, faWindowClose, faChevronDown} from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Control from './Control/Control';
 import Backdrop from 'components/UI/Backdrop/Backdrop';
 import { updateObject } from 'utility';

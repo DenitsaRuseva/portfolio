@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, Fragment} from 'react';
 import Button from 'components/UI/Button/Button';
 import HeaderContainer from 'components/UI/HeaderContainer/HeaderContainer';
 import './FancyGallery.css';
@@ -45,14 +45,21 @@ export default function FancyGallery(props){
     };
 
 
-    let content = <Spinner/>;
+    let content = <Fragment><div className='spinner-container'><Spinner/></div><div className='g-img-container hidden'></div></Fragment>;
     if(!loading){
-        content = <Images data={data}/>;
+        content = (
+        <Fragment>
+        <div className='spinner-container'>
+            <Spinner/>
+        </div>
+        <div className='g-img-container'>
+            <Images data={data} error={error}/>
+        </div>
+        </Fragment>);
     };
-    if(error){
-    content = <div>{error.message}</div>
-    };
-    const images = loading ? <Spinner/> : <Images data={data}/>;
+    // if(error){
+    // content = <div>{error.message}</div>
+    // };
     return(
         <div className='fancyGallery'>
             <InViewListener>
