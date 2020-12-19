@@ -13,7 +13,8 @@ body {
   margin: 0px;
   padding: 0px;
   width: 100%;
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
+  /* font-family: 'Open Sans Condensed', sans-serif; */
   color: white;
 }
 
@@ -35,4 +36,10 @@ body {
 main {
   position: relative;
   width: 100%;
+}
+
+a {
+  font: inherit;
+  text-decoration: none;
+  color: inherit;
 }

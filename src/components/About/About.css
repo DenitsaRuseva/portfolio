@@ -44,6 +44,11 @@ div.about div.about-img-text-wrapp{
     text-align: center;
 }
 
+.about-text-container .paragraph-container p a{
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
 div.about div.about-img-container {
     margin-bottom: 30px;
 }

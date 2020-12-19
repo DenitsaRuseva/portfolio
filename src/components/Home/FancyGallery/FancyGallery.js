@@ -40,7 +40,7 @@ export default function FancyGallery(props){
             setLoading(false);
         } else {
             setError(err);
-            setData(data);
+            setLoading(false);
         };
     };
 

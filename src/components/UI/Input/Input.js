@@ -5,7 +5,6 @@ import './Input.css';
 export default function input(props){
     let inputElement;
     const attachedClasses = props.valid === false && props.tuched === true ? ['input', 'invalid'] : ['input', 'valid'];
-    if(props.label){
         switch(props.inputType){
             case 'input': 
             return inputElement = (
@@ -39,36 +38,6 @@ export default function input(props){
                 </p>
             );
             default: inputElement = <input className={attachedClasses.join(' ')} onChange={props.changed} required={props.required}/>
-        };
-    } 
-    // else {
-    //     switch(props.inputType){
-    //         case 'input': 
-    //         return inputElement = (
-    //             <input 
-    //             className={attachedClasses.join(' ')} 
-    //             type={props.config.type} 
-    //             name={props.config.name} 
-    //             value={props.value}
-    //             onChange={props.changed}
-    //             required={props.required}/>
-    //         );
-    //         case 'textarea': 
-    //         return inputElement = (
-    //                 <textarea 
-    //                 className={attachedClasses.join(' ')}
-    //                 name={props.config.name} 
-    //                 rows={props.config.rows} 
-    //                 cols={props.config.cols}
-    //                 maxlength={props.config.maxLength}
-    //                 minlength={props.config.minLength}
-    //                 value={props.value}
-    //                 onChange={props.changed}
-    //                 required={props.required}></textarea>
-    //         );
-    //         default: inputElement = <input className={attachedClasses.join(' ')} value={props.value} onChange={props.changed} required={props.required}/>
-    //     };
-    // };
-    
+    };
     return inputElement;
 };

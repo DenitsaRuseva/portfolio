@@ -57,7 +57,7 @@ export default function Carousel(props){
             </div>
         </div>
             <div className='home-carousel-text-wrapp'>
-            <Paragraphcontainer header={props.header}>{props.text}</Paragraphcontainer>
+            <Paragraphcontainer header={props.header}><p>{props.text}</p></Paragraphcontainer>
             <Button class='btn' type='button' clicked={props.goToGallery}>VIEW GALLERY &gt;</Button>
         </div>
         </Fragment>

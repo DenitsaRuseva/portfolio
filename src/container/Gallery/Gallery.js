@@ -29,7 +29,7 @@ function Gallery(props){
             setLoading(false);
         } else {
             setError(err);
-            // setLoading(false);
+            setLoading(false);
         };
     };
     const filterImagesHandler = (filter, value) => {

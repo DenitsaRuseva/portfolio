@@ -18,7 +18,7 @@ div.home-carousel > div.home-carousel-text-wrapp > div.paragraph-container{
     margin: 0px;
     margin-bottom: 5px;
     font-size: 2.5rem;
-    font-weight: 500;
+    font-weight: 400;
     text-align: left;
     -webkit-transition: left 0.7s;
     -o-transition: left 0.7s;
@@ -42,7 +42,7 @@ div.home-carousel > div.home-carousel-text-wrapp > div.paragraph-container > h3 
     margin: 0px;
     margin-bottom: 20px;
     text-align: left;
-    font-weight: 500;
+    font-weight: 300;
 }
 
 div.home-carousel > div.home-carousel-text-wrapp > div.paragraph-container > p {

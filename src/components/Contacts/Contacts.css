@@ -160,7 +160,7 @@ div.contacts > div.contacts-wrapp div.contact-btn-container .btn{
             flex-wrap: wrap;
         width: 100%;
         max-width: 800px;
-        padding: 0 20px;
+        padding: 40px 20px;
         /* flex-direction: row;
         flex-wrap: wrap; */
     }

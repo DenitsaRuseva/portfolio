@@ -1,10 +1,11 @@
 import React from 'react';
 import './About.css';
 import {ReactComponent as AboutImage} from 'assets/images/robot.svg';
-// import aboutImg from 'assets/images/photographer-30423.svg';
 import HeaderContainer from 'components/UI/HeaderContainer/HeaderContainer';
 import ParagraphContainer from 'components/UI/ParagraphContainer/ParagraphContainer';
 import InViewListener from 'hoc/InViewListener/InViewListener';
+import {faSmile} from '@fortawesome/free-solid-svg-icons';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 export default function about(){
 
@@ -25,11 +26,21 @@ export default function about(){
                 </div>
                 <div className='about-text-container'>
                     <InViewListener>
-                        <ParagraphContainer header='A LITTLE INTRO'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</ParagraphContainer>
-                        <ParagraphContainer header='MY EXIBITIONS'>Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Lorem ipsum dolor quis nostrud exercitation ullamco</ParagraphContainer>  
+                        <ParagraphContainer header='ABOUT'>
+                            <p>The creator of this app is looking for a job.</p>
+
+                        </ParagraphContainer>
+                        <ParagraphContainer header='THANKS'>
+                        <p>All of the gallery`s astonishing images and the home page background are <a href='https://www.facebook.com/profile.php?id=100013766258333'>Ivan Slizov`s</a> creations. Thank you, old friend!</p>          
+                        <p>The charming robot is <a href='https://pixabay.com/users/mosrod-3283393/'>Mosrod`s</a> creation, and the 404 man - 
+                        <a href='https://pixabay.com/users/clker-free-vector-images-3736/'> Clker`s.</a>
+                        </p>                        
+                        </ParagraphContainer>
                     </InViewListener>
                 </div>
             </div>
         </div>
     );
 };
+
+

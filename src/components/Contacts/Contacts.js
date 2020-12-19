@@ -3,9 +3,8 @@ import './Contacts.css';
 import Input from 'components/UI/Input/Input';
 import InViewListener from 'hoc/InViewListener/InViewListener';
 import Button from 'components/UI/Button/Button';
-import {faFacebookSquare} from '@fortawesome/free-brands-svg-icons';
-import {faPhoneSquare, faEnvelope} from '@fortawesome/free-solid-svg-icons';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import ContactsText from './ContactsText/ContactsText';
+
 import {updateObject, checkValidity} from '../../utility';
 
 export default function Contacts(){
@@ -122,23 +121,7 @@ export default function Contacts(){
         <div className='contacts'>
             <div className='contacts-wrapp'>
                 <InViewListener>
-                    <h2>CONTACT ME</h2>
-                    <div className='contacts-details'>
-                        <div className='contacts-details-wrapp'>
-                            <div>
-                                <FontAwesomeIcon icon={faPhoneSquare}/>
-                                <span>Phone: +000 000 000</span>
-                            </div>
-                            <div>
-                                <FontAwesomeIcon icon={faEnvelope}/>
-                                <span>E-mail: email@test.com</span>
-                            </div>
-                            <div>
-                                <FontAwesomeIcon icon={faFacebookSquare}/>
-                                <span>Facebook: facebook/user</span>
-                            </div>
-                        </div>
-                    </div>
+                    <ContactsText/>
                     <div className='contact-form-container'>
                         <form>
                             {formElements}
