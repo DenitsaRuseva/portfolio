@@ -26,8 +26,7 @@ function home(props){
                     <InViewListener>
                         <HeaderContainer header='HEADER' subtitle='Donec varius libero purus, tristique egestas.'  />
                     </InViewListener>
-                    <Carousels/>
-                    
+                    <Carousels goToGallery={goToGalleryHandler}/>  
                  </div>
                     <About/>
             </div>

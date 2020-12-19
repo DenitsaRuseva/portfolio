@@ -31,7 +31,7 @@ export default function about(){
 
                         </ParagraphContainer>
                         <ParagraphContainer header='THANKS'>
-                        <p>All of the gallery`s astonishing images and the home page background are <a href='https://www.facebook.com/profile.php?id=100013766258333'>Ivan Slizov`s</a> creations. Thank you, old friend!</p>          
+                        <p>All of the gallery`s beautiful images and the home page background are <a href='https://www.facebook.com/profile.php?id=100013766258333'>Ivan Slizov`s</a> creations. Thank you, old friend!</p>          
                         <p>The charming robot is <a href='https://pixabay.com/users/mosrod-3283393/'>Mosrod`s</a> creation, and the 404 man - 
                         <a href='https://pixabay.com/users/clker-free-vector-images-3736/'> Clker`s.</a>
                         </p>                        
