@@ -1,5 +1,13 @@
 div.notFound{
     position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     width: 100%;
     height: calc(100vh - 9rem);
     background: black;
@@ -8,18 +16,12 @@ div.notFound{
 div.notFound > span{
     display: inline-block;
     width: 100%;
-    height: 6rem;
     padding: 0.5rem 0;
     font-size: 5rem;
     font-family: 'Architects Daughter', cursive;
     line-height: 5rem;
     text-shadow: 0px 0px 3px gray, 1px 1px 3px black;
     color: #000000;
-}
-
-div.notFound > svg {
-    height: calc(100% - 5rem);
-    padding: 20px;
 }
 
 @media only screen and (min-width: 992px){
