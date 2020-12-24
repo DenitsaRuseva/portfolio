@@ -47,22 +47,11 @@ export function checkValidity(value, rules){
   if ( rules.required ) {
     isValid = value.trim() !== '' && isValid;
   };
-  if(isValid && rules.minLength){
-    isValid = value.length >= rules.minLength;
-  };
   if(isValid && rules.maxLength){
     isValid = value.length <= rules.maxLength
   };
   if(isValid && rules.email && (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value))){
     isValid = false
   };
-
-  // if (isValid && rules.maxValue) {
-  //     isValid = value < rules.maxValue;
-  // };
-
-  // if(isValid && rules.minValue) {
-  //     isValid = value >= rules.minValue;
-  // };
   return isValid;
 };

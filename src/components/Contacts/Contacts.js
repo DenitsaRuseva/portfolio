@@ -9,13 +9,13 @@ import {updateObject, checkValidity} from '../../utility';
 
 export default function Contacts(){
 
+    const [formIsValid, setFormIsValid] = useState(false);
     const [form, setForm] = useState({
         name: {
             elType: 'input',
             config: {
                 type: 'text',
-                name: 'name',
-                label: true
+                name: 'name'
             },
             valid: false,
             tuched: false,
@@ -29,8 +29,7 @@ export default function Contacts(){
             elType: 'input',
             config: {
                 type: 'email',
-                name: 'email',
-                label: true
+                name: 'email'
             },
             valid: false,
             tuched: false,
@@ -45,7 +44,6 @@ export default function Contacts(){
             config: {
                 type: 'text',
                 name: 'message',
-                label: true,
                 rows: 13,
                 cols: 50
             },
@@ -53,14 +51,16 @@ export default function Contacts(){
             tuched: false,
             validation: {
                 required: true,
-                maxLength: 1000,
-                minLength: 10
+                maxLength: 1000
             },
             value: ''
         }
     });
 
     const resetForm = () => {
+        if(!formIsValid){
+            return;
+        };
         let updatedForm = {};
         for(let key in form){
             const updatedConfig = {...form[key].config};
@@ -82,11 +82,10 @@ export default function Contacts(){
         const inputValue = event.target.value;
         const isValid = checkValidity(inputValue, form[inputName].validation);
         const updatedInput = updateObject(form[inputName], {value: inputValue, valid: isValid, tuched: true});
-        // const updatedFormIsValid = checkFormValidity();
+        const updatedFormIsValid = checkFormValidity();
         const updatedForm = updateObject(form, {[inputName]: updatedInput});
         setForm(updatedForm);
-        // setFormIsValid(updatedFormIsValid);
-
+        setFormIsValid(updatedFormIsValid);
     };
 
     const checkFormValidity = () => {
@@ -128,7 +127,7 @@ export default function Contacts(){
                         </form>
                     </div>
                     <div className='contact-btn-container'>
-                        <Button class={checkFormValidity() ? 'btn' : 'btn disabled'} clicked={resetForm}>SEND</Button>
+                        <Button class={formIsValid ? 'btn' : 'btn disabled'} clicked={resetForm}>SEND</Button>
                     </div>
                 </InViewListener>
             </div>

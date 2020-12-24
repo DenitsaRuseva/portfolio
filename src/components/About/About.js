@@ -4,8 +4,6 @@ import {ReactComponent as AboutImage} from 'assets/images/robot.svg';
 import HeaderContainer from 'components/UI/HeaderContainer/HeaderContainer';
 import ParagraphContainer from 'components/UI/ParagraphContainer/ParagraphContainer';
 import InViewListener from 'hoc/InViewListener/InViewListener';
-import {faSmile} from '@fortawesome/free-solid-svg-icons';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 export default function about(){
 

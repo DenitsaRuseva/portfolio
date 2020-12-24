@@ -54,6 +54,7 @@ export default function Layout() {
         <Toolbar/>
         <main>
             <Switch>
+                <Route path='/portfolio' render={() => <Fragment><Home/><GoToTopBtn show={showTopBtn} clicked={goToTopHandler}/></Fragment>}/>
                 <Route path='/gallery' render={() => <Fragment><Gallery/><GoToTopBtn show={showTopBtn} clicked={goToTopHandler}/></Fragment>}/>
                 <Route path='/about' component={About}/>
                 <Route path='/contacts' component={Contacts}/>
