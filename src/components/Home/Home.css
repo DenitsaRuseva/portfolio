@@ -1,60 +1,27 @@
 .home{
     position: relative;
     width: 100%;
-    padding-bottom: calc(100vh - 9rem);
     color: white;
-    /* background: rgba(0,0,0,0.7); */
 }
 
 
-
-
-.home::after{
-    content: '';
-    position: absolute;
-
+.home div.parallax-wrapp{
+    position: relative;
     top: 0;
-    right: 0;
-    left: 0;
-    height: 150vh;
-    background: url('../../assets/images/21752617_313159862486220_2846810308660514837_o.jpg') no-repeat center center;
-    /* background: url('../../assets/horse_sm.jpg') no-repeat center center; */
-    -webkit-transform: translateZ(-1px) scale(1.5);
-            transform: translateZ(-1px) scale(1.5);
-    background-attachment: fixed;
-    /* background-position-x: 20%; */
-    /* background-position-y: 20%; */
-    /* background-position-y: 20%; */
-    /* filter: grayscale(100%); */
-    z-index: -1;
+    width: 100%;
+    height: calc(100vh - 9rem);
 }
-/* 
-.home::before{
-    display: block;
-    content: '';
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    left: 10px;
-    height: calc(81vh - 20px);
-    border: 3px double rgba(0,0,0,0.4)
-   
-} */
-
-/* .background-border{
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    bottom: 15px;
-    right: 15px;
-    border: 1px solid #1c1c1c;
-} */
-
+.home img.home-background{
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    min-height: 100%;
+}
 
 
 .home-content{
    position: relative;
-   top: calc(100vh - 9rem);
+   top: 0;
    background: #000000;
 }
 
@@ -78,7 +45,6 @@ div.home > div.about > div.about-img-container{
 .home-carousels{
     width: 100%;
     padding: 0 20px;
-    /* padding: 30px 0; */
 }
 
 .home-carousel{
@@ -103,12 +69,7 @@ div.home div.home-carousel.right div.carousel{
 
 div.home-carousel > div.home-carousel-text-wrapp{
     max-width: 600px;
-    /* margin: 0 auto 0 0; */
     margin: 0 auto;
-}
-
-div.home-carousel.right > div.home-carousel-text-wrapp{
-    /* margin: 0 0 0 auto; */
 }
 
 @media only screen and (min-width: 768px){
@@ -142,19 +103,13 @@ div.home-carousel.right > div.home-carousel-text-wrapp{
 }
 
 @media only screen and (min-width: 992px){
-    div.home{
-        padding-bottom: 100vh;
-    }
+
     div.home-carousels{
         padding: 0 20px;
     }
-    .home::after{
-        height: 200vh;
+  
+    .home div.parallax-wrapp{
+        height: 100vh;
     }
-    .home::before{
-        height: calc(100vh - 20px);
-    }
-    .home-content{
-        top: 100vh;
-    }
+ 
 }

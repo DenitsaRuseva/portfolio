@@ -1,0 +1,71 @@
+.parallax-text-container{
+    position: absolute;
+    top: calc(50vh - 8rem);
+    width: 100%;
+    height: 3rem;
+    line-height: 3rem;
+    font-size: 3rem; 
+    font-family: 'Xanh Mono', monospace;
+    text-align: center;
+    letter-spacing: 0.5rem;
+}
+
+span.f-container{
+    position: relative;
+    display: inline-block;
+    height: 4rem;
+    width: 4rem;
+}
+
+
+
+span.f-border{
+    position: relative;
+    top: 0.6rem;
+    display: inline-block;
+    margin: 1.2rem;
+    border: 1px solid white;
+    transform: rotate(45deg);
+}
+span.f{
+    position: relative;
+    left: 0.1rem;
+    top: -0.4rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.5rem;
+    height: 4.5rem;
+    border: 1px solid white;
+    line-height: 4.5rem;
+    font-size: 4.5rem;
+    /* font-family: monospace; */
+    text-align: center;
+    /* color: transparent; */
+    transform: rotate(-64deg);
+    
+}
+span.ff{
+    transform: rotate(20deg);
+}
+
+@media only screen and (min-width: 992px){
+    .parallax-text-container{
+        top: calc(50vh - 4rem);
+        height: 5rem;
+        font-size: 5rem;
+        line-height: 5rem;
+    }
+    span.f-container{
+        width: 5rem;
+        height: 5rem;
+    }
+    span.f-border{
+        width: 5rem;
+        height: 5rem;
+    }
+    span.f{
+        font-size: 5rem;
+        line-height: 5rem;
+    }
+}
