@@ -13,7 +13,7 @@ const ParallaxComponent = () => {
         <Fragment>
             <div className='parallax-wrapp'>
                 <Parallax
-                    styleOuter={{ position: 'relative', width: '100%', height: '100%' }}
+                    styleOuter={{ position: 'relative', width: '100%', height: '100%', background: '#000000' }}
                     styleInner={{ position: 'relative', width: '100%', height: '100%', top: '-40%'}}
                     y={[40, -40]}
                 >
