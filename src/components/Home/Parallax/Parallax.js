@@ -20,17 +20,19 @@ const ParallaxComponent = () => {
                     <ParalaxImage src={background} />
                 </Parallax>
                 <div  className='parallax-text-container'>
+                    <span>
                     <Parallax  styleOuter={{ display: 'inline-block'}} x={[170, -100]}>P</Parallax>
                     <Parallax  styleOuter={{ display: 'inline-block'}} x={[170, -100]}>O</Parallax>
                     <Parallax  styleOuter={{ display: 'inline-block'}} x={[170, -100]}>R</Parallax>
                     <Parallax  styleOuter={{ display: 'inline-block'}} x={[170, -100]}>T</Parallax>
-                   
+                    </span>
                     <span className='f-border'><span className='f'><span className='ff'>F</span></span></span>
-                   
+                   <span>
                     <Parallax  styleOuter={{ display: 'inline-block'}} x={[-115, 160]}>O</Parallax>
                     <Parallax  styleOuter={{ display: 'inline-block'}} x={[-115, 160]}>L</Parallax>
                     <Parallax  styleOuter={{ display: 'inline-block'}} x={[-115, 160]}>I</Parallax>
                     <Parallax  styleOuter={{ display: 'inline-block'}} x={[-115, 160]}>O</Parallax>
+                    </span>
                 </div>
 
             </div>
